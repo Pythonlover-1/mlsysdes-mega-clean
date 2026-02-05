@@ -8,14 +8,13 @@ Full-stack приложение для конвертации изображен
 
 ## Стек
 
-- **Backend**: Python, FastAPI, OpenRouter API
+- **Backend**: Python, FastAPI
 - **Frontend**: React, TypeScript, Vite, Tailwind CSS
 - **Инфра**: Docker, Docker Compose, Nginx
 
 ## Запуск
 
 ```bash
-export OPENROUTER_API_KEY=your_key
 docker compose up --build
 ```
 
