@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white antialiased;
+  }
+
+  * {
+    @apply scroll-smooth;
+  }
+
+  /* Remove default blue focus outlines and use gray */
+  *:focus {
+    outline-color: rgb(107, 114, 128);
+  }
+
+  /* Remove blue from links */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Remove blue from default browser styles */
+  input:focus,
+  textarea:focus,
+  select:focus,
+  button:focus,
+  summary:focus {
+    outline-color: rgb(107, 114, 128);
+  }
+}

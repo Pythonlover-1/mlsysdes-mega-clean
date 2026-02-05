@@ -1,0 +1,199 @@
+{
+  "nodes": [
+    {
+      "id": "node_0",
+      "label": "task",
+      "name": "task_0",
+      "score": 0.802,
+      "box": [
+        142.0,
+        1174.08,
+        324.96,
+        1262.12
+      ],
+      "center": [
+        233.48,
+        1218.1
+      ],
+      "lane_id": null
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_0",
+      "label": "sequenceFlow",
+      "score": 0.829,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          239.46,
+          130.12
+        ],
+        [
+          238.51,
+          205.03
+        ]
+      ]
+    },
+    {
+      "id": "edge_1",
+      "label": "sequenceFlow",
+      "score": 0.762,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          238.4,
+          884.43
+        ],
+        [
+          238.4,
+          965.61
+        ]
+      ]
+    },
+    {
+      "id": "edge_2",
+      "label": "sequenceFlow",
+      "score": 0.696,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          238.08,
+          506.41
+        ],
+        [
+          239.03,
+          582.49
+        ]
+      ]
+    },
+    {
+      "id": "edge_3",
+      "label": "sequenceFlow",
+      "score": 0.618,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          237.8,
+          1095.18
+        ],
+        [
+          238.76,
+          1173.29
+        ]
+      ]
+    },
+    {
+      "id": "edge_4",
+      "label": "sequenceFlow",
+      "score": 0.614,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          237.67,
+          336.01
+        ],
+        [
+          238.64,
+          413.03
+        ]
+      ]
+    },
+    {
+      "id": "edge_5",
+      "label": "sequenceFlow",
+      "score": 0.583,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          238.42,
+          677.15
+        ],
+        [
+          238.42,
+          752.82
+        ]
+      ]
+    }
+  ],
+  "lanes": [
+    {
+      "id": "lane_0",
+      "label": "pool",
+      "name": "pool_0",
+      "score": 0.861,
+      "box": [
+        22.61,
+        419.27,
+        454.05,
+        502.41
+      ]
+    },
+    {
+      "id": "lane_1",
+      "label": "pool",
+      "name": "pool_1",
+      "score": 0.854,
+      "box": [
+        40.72,
+        761.17,
+        449.41,
+        875.84
+      ]
+    },
+    {
+      "id": "lane_2",
+      "label": "pool",
+      "name": "pool_2",
+      "score": 0.846,
+      "box": [
+        31.2,
+        210.04,
+        452.72,
+        325.32
+      ]
+    },
+    {
+      "id": "lane_3",
+      "label": "pool",
+      "name": "pool_3",
+      "score": 0.84,
+      "box": [
+        25.69,
+        970.41,
+        447.89,
+        1084.17
+      ]
+    },
+    {
+      "id": "lane_4",
+      "label": "pool",
+      "name": "pool_4",
+      "score": 0.737,
+      "box": [
+        39.64,
+        32.98,
+        430.1,
+        121.2
+      ]
+    },
+    {
+      "id": "lane_5",
+      "label": "pool",
+      "name": "pool_5",
+      "score": 0.721,
+      "box": [
+        40.28,
+        583.08,
+        434.61,
+        669.28
+      ]
+    }
+  ]
+}

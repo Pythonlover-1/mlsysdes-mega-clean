@@ -1,0 +1,14 @@
+digraph BPMN {
+  layout=neato;
+  overlap=false;
+  splines=true;
+  node [shape=box, fontsize=10];
+  edge [fontsize=8];
+
+  "node_0" [label="task_0\n(task)", shape=box, fontsize=10, pos="9.84,14.02!", width=3.04, height=1.67, fixedsize=true];
+  "node_1" [label="task_1\n(task)", shape=box, fontsize=10, pos="21.09,14.02!", width=3.34, height=1.69, fixedsize=true];
+  "node_2" [label="task_2\n(task)", shape=box, fontsize=10, pos="30.29,14.01!", width=3.57, height=1.71, fixedsize=true];
+
+  "node_1" -> "node_2" [];
+  "node_0" -> "node_1" [];
+}

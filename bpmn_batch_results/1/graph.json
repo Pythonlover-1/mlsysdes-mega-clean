@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "node_0",
+      "label": "task",
+      "name": "task_0",
+      "score": 0.985,
+      "box": [
+        299.61,
+        332.41,
+        408.95,
+        392.46
+      ],
+      "center": [
+        354.28,
+        362.435
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_1",
+      "label": "task",
+      "name": "task_1",
+      "score": 0.983,
+      "box": [
+        698.93,
+        331.7,
+        819.2,
+        392.59
+      ],
+      "center": [
+        759.065,
+        362.145
+      ],
+      "lane_id": "lane_0"
+    },
+    {
+      "id": "node_2",
+      "label": "task",
+      "name": "task_2",
+      "score": 0.959,
+      "box": [
+        1026.36,
+        331.83,
+        1154.8,
+        393.22
+      ],
+      "center": [
+        1090.58,
+        362.525
+      ],
+      "lane_id": "lane_0"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_0",
+      "label": "sequenceFlow",
+      "score": 0.997,
+      "source": "node_1",
+      "target": "node_2",
+      "keypoints": [
+        [
+          823.44,
+          363.66
+        ],
+        [
+          1027.17,
+          362.57
+        ]
+      ]
+    },
+    {
+      "id": "edge_1",
+      "label": "sequenceFlow",
+      "score": 0.982,
+      "source": "node_0",
+      "target": "node_1",
+      "keypoints": [
+        [
+          419.61,
+          362.03
+        ],
+        [
+          697.34,
+          362.03
+        ]
+      ]
+    }
+  ],
+  "lanes": [
+    {
+      "id": "lane_0",
+      "label": "pool",
+      "name": "pool_0",
+      "score": 0.729,
+      "box": [
+        578.43,
+        192.46,
+        1364.08,
+        780.15
+      ]
+    },
+    {
+      "id": "lane_1",
+      "label": "pool",
+      "name": "pool_1",
+      "score": 0.589,
+      "box": [
+        693.9,
+        407.49,
+        1288.84,
+        779.68
+      ]
+    }
+  ]
+}

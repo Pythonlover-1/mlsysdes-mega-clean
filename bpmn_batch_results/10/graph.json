@@ -1,0 +1,1100 @@
+{
+  "nodes": [
+    {
+      "id": "node_0",
+      "label": "subProcess",
+      "name": "subProcess_0",
+      "score": 0.637,
+      "box": [
+        1736.94,
+        389.78,
+        1839.94,
+        480.03
+      ],
+      "center": [
+        1788.44,
+        434.905
+      ],
+      "lane_id": "lane_0"
+    },
+    {
+      "id": "node_1",
+      "label": "subProcess",
+      "name": "subProcess_1",
+      "score": 0.577,
+      "box": [
+        3174.2,
+        881.39,
+        3343.28,
+        995.91
+      ],
+      "center": [
+        3258.74,
+        938.65
+      ],
+      "lane_id": "lane_2"
+    },
+    {
+      "id": "node_2",
+      "label": "subProcess",
+      "name": "subProcess_2",
+      "score": 0.571,
+      "box": [
+        1725.67,
+        1122.71,
+        1854.83,
+        1220.61
+      ],
+      "center": [
+        1790.25,
+        1171.6599999999999
+      ],
+      "lane_id": "lane_0"
+    },
+    {
+      "id": "node_3",
+      "label": "task",
+      "name": "task_3",
+      "score": 0.963,
+      "box": [
+        3576.22,
+        383.69,
+        3721.96,
+        472.75
+      ],
+      "center": [
+        3649.09,
+        428.22
+      ],
+      "lane_id": "lane_0"
+    },
+    {
+      "id": "node_4",
+      "label": "task",
+      "name": "task_4",
+      "score": 0.959,
+      "box": [
+        1308.85,
+        736.64,
+        1468.33,
+        824.3
+      ],
+      "center": [
+        1388.59,
+        780.47
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_5",
+      "label": "task",
+      "name": "task_5",
+      "score": 0.918,
+      "box": [
+        829.28,
+        397.89,
+        978.05,
+        489.03
+      ],
+      "center": [
+        903.665,
+        443.46
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_6",
+      "label": "task",
+      "name": "task_6",
+      "score": 0.916,
+      "box": [
+        229.32,
+        385.11,
+        362.48,
+        498.4
+      ],
+      "center": [
+        295.9,
+        441.755
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_7",
+      "label": "task",
+      "name": "task_7",
+      "score": 0.799,
+      "box": [
+        3177.86,
+        1366.57,
+        3337.5,
+        1486.62
+      ],
+      "center": [
+        3257.6800000000003,
+        1426.5949999999998
+      ],
+      "lane_id": "lane_3"
+    },
+    {
+      "id": "node_8",
+      "label": "task",
+      "name": "task_8",
+      "score": 0.776,
+      "box": [
+        2284.8,
+        894.34,
+        2414.74,
+        983.39
+      ],
+      "center": [
+        2349.77,
+        938.865
+      ],
+      "lane_id": "lane_2"
+    },
+    {
+      "id": "node_9",
+      "label": "task",
+      "name": "task_9",
+      "score": 0.761,
+      "box": [
+        2861.11,
+        891.52,
+        2994.22,
+        981.71
+      ],
+      "center": [
+        2927.665,
+        936.615
+      ],
+      "lane_id": "lane_2"
+    },
+    {
+      "id": "node_10",
+      "label": "task",
+      "name": "task_10",
+      "score": 0.733,
+      "box": [
+        446.58,
+        558.91,
+        566.93,
+        643.74
+      ],
+      "center": [
+        506.755,
+        601.325
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_11",
+      "label": "task",
+      "name": "task_11",
+      "score": 0.646,
+      "box": [
+        1729.48,
+        1369.0,
+        1850.77,
+        1461.44
+      ],
+      "center": [
+        1790.125,
+        1415.22
+      ],
+      "lane_id": "lane_3"
+    },
+    {
+      "id": "node_12",
+      "label": "task",
+      "name": "task_12",
+      "score": 0.596,
+      "box": [
+        3128.35,
+        204.46,
+        3337.28,
+        326.75
+      ],
+      "center": [
+        3232.815,
+        265.605
+      ],
+      "lane_id": "lane_0"
+    },
+    {
+      "id": "node_13",
+      "label": "messageEvent",
+      "name": "messageEvent_13",
+      "score": 0.848,
+      "box": [
+        663.75,
+        410.61,
+        708.9,
+        456.33
+      ],
+      "center": [
+        686.325,
+        433.47
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_14",
+      "label": "messageEvent",
+      "name": "messageEvent_14",
+      "score": 0.547,
+      "box": [
+        3792.61,
+        407.03,
+        3842.95,
+        455.83
+      ],
+      "center": [
+        3817.7799999999997,
+        431.42999999999995
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_15",
+      "label": "exclusiveGateway",
+      "name": "exclusiveGateway_15",
+      "score": 0.999,
+      "box": [
+        1192.59,
+        746.22,
+        1263.73,
+        816.19
+      ],
+      "center": [
+        1228.1599999999999,
+        781.205
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_16",
+      "label": "exclusiveGateway",
+      "name": "exclusiveGateway_16",
+      "score": 0.998,
+      "box": [
+        651.39,
+        567.84,
+        720.57,
+        637.05
+      ],
+      "center": [
+        685.98,
+        602.4449999999999
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_17",
+      "label": "exclusiveGateway",
+      "name": "exclusiveGateway_17",
+      "score": 0.998,
+      "box": [
+        2165.02,
+        903.82,
+        2229.16,
+        977.67
+      ],
+      "center": [
+        2197.09,
+        940.745
+      ],
+      "lane_id": "lane_2"
+    },
+    {
+      "id": "node_18",
+      "label": "parallelGateway",
+      "name": "parallelGateway_18",
+      "score": 0.996,
+      "box": [
+        1513.17,
+        749.06,
+        1581.78,
+        817.95
+      ],
+      "center": [
+        1547.475,
+        783.505
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_19",
+      "label": "exclusiveGateway",
+      "name": "exclusiveGateway_19",
+      "score": 0.996,
+      "box": [
+        2702.69,
+        221.98,
+        2767.68,
+        295.8
+      ],
+      "center": [
+        2735.185,
+        258.89
+      ],
+      "lane_id": "lane_1"
+    },
+    {
+      "id": "node_20",
+      "label": "parallelGateway",
+      "name": "parallelGateway_20",
+      "score": 0.995,
+      "box": [
+        3414.3,
+        902.6,
+        3485.23,
+        979.88
+      ],
+      "center": [
+        3449.7650000000003,
+        941.24
+      ],
+      "lane_id": "lane_2"
+    },
+    {
+      "id": "node_21",
+      "label": "parallelGateway",
+      "name": "parallelGateway_21",
+      "score": 0.992,
+      "box": [
+        3041.62,
+        905.32,
+        3110.31,
+        979.9
+      ],
+      "center": [
+        3075.965,
+        942.61
+      ],
+      "lane_id": "lane_2"
+    },
+    {
+      "id": "node_22",
+      "label": "parallelGateway",
+      "name": "parallelGateway_22",
+      "score": 0.983,
+      "box": [
+        1962.86,
+        745.97,
+        2038.04,
+        822.18
+      ],
+      "center": [
+        2000.4499999999998,
+        784.075
+      ],
+      "lane_id": "lane_0"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_0",
+      "label": "sequenceFlow",
+      "score": 1.0,
+      "source": "node_21",
+      "target": "node_7",
+      "keypoints": [
+        [
+          3073.72,
+          994.41
+        ],
+        [
+          3183.61,
+          1425.46
+        ]
+      ]
+    },
+    {
+      "id": "edge_1",
+      "label": "sequenceFlow",
+      "score": 1.0,
+      "source": "node_7",
+      "target": "node_20",
+      "keypoints": [
+        [
+          3343.48,
+          1435.2
+        ],
+        [
+          3449.75,
+          969.4
+        ]
+      ]
+    },
+    {
+      "id": "edge_2",
+      "label": "sequenceFlow",
+      "score": 1.0,
+      "source": "node_5",
+      "target": "node_15",
+      "keypoints": [
+        [
+          980.06,
+          443.84
+        ],
+        [
+          1202.86,
+          772.85
+        ]
+      ]
+    },
+    {
+      "id": "edge_3",
+      "label": "sequenceFlow",
+      "score": 0.999,
+      "source": "node_18",
+      "target": null,
+      "keypoints": [
+        [
+          1551.88,
+          819.86
+        ],
+        [
+          1718.68,
+          951.01
+        ]
+      ]
+    },
+    {
+      "id": "edge_4",
+      "label": "sequenceFlow",
+      "score": 0.999,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          1720.97,
+          1413.84
+        ],
+        [
+          1720.97,
+          1413.84
+        ]
+      ]
+    },
+    {
+      "id": "edge_5",
+      "label": "sequenceFlow",
+      "score": 0.999,
+      "source": "node_1",
+      "target": "node_20",
+      "keypoints": [
+        [
+          3340.27,
+          942.85
+        ],
+        [
+          3420.16,
+          942.85
+        ]
+      ]
+    },
+    {
+      "id": "edge_6",
+      "label": "sequenceFlow",
+      "score": 0.999,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          154.34,
+          440.77
+        ],
+        [
+          231.81,
+          443.62
+        ]
+      ]
+    },
+    {
+      "id": "edge_7",
+      "label": "sequenceFlow",
+      "score": 0.999,
+      "source": "node_22",
+      "target": "node_17",
+      "keypoints": [
+        [
+          2021.97,
+          819.51
+        ],
+        [
+          2165.4,
+          940.5
+        ]
+      ]
+    },
+    {
+      "id": "edge_8",
+      "label": "sequenceFlow",
+      "score": 0.999,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          2625.94,
+          261.0
+        ],
+        [
+          2702.69,
+          261.0
+        ]
+      ]
+    },
+    {
+      "id": "edge_9",
+      "label": "sequenceFlow",
+      "score": 0.998,
+      "source": "node_9",
+      "target": "node_21",
+      "keypoints": [
+        [
+          2995.86,
+          943.8
+        ],
+        [
+          3043.01,
+          943.8
+        ]
+      ]
+    },
+    {
+      "id": "edge_10",
+      "label": "sequenceFlow",
+      "score": 0.998,
+      "source": "node_3",
+      "target": "node_14",
+      "keypoints": [
+        [
+          3728.43,
+          429.7
+        ],
+        [
+          3791.85,
+          429.7
+        ]
+      ]
+    },
+    {
+      "id": "edge_11",
+      "label": "sequenceFlow",
+      "score": 0.997,
+      "source": "node_6",
+      "target": "node_10",
+      "keypoints": [
+        [
+          368.54,
+          452.87
+        ],
+        [
+          444.31,
+          608.54
+        ]
+      ]
+    },
+    {
+      "id": "edge_12",
+      "label": "sequenceFlow",
+      "score": 0.997,
+      "source": "node_20",
+      "target": "node_12",
+      "keypoints": [
+        [
+          3446.1,
+          912.56
+        ],
+        [
+          3341.83,
+          264.33
+        ]
+      ]
+    },
+    {
+      "id": "edge_13",
+      "label": "sequenceFlow",
+      "score": 0.997,
+      "source": "node_21",
+      "target": "node_1",
+      "keypoints": [
+        [
+          3106.4,
+          939.52
+        ],
+        [
+          3190.76,
+          942.25
+        ]
+      ]
+    },
+    {
+      "id": "edge_14",
+      "label": "sequenceFlow",
+      "score": 0.997,
+      "source": "node_17",
+      "target": "node_8",
+      "keypoints": [
+        [
+          2229.22,
+          941.17
+        ],
+        [
+          2277.11,
+          941.17
+        ]
+      ]
+    },
+    {
+      "id": "edge_15",
+      "label": "sequenceFlow",
+      "score": 0.995,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          2857.22,
+          937.76
+        ],
+        [
+          2857.22,
+          937.76
+        ]
+      ]
+    },
+    {
+      "id": "edge_16",
+      "label": "sequenceFlow",
+      "score": 0.994,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          1470.8,
+          782.38
+        ],
+        [
+          1518.8,
+          785.25
+        ]
+      ]
+    },
+    {
+      "id": "edge_17",
+      "label": "sequenceFlow",
+      "score": 0.993,
+      "source": "node_18",
+      "target": "node_0",
+      "keypoints": [
+        [
+          1541.66,
+          770.42
+        ],
+        [
+          1735.76,
+          439.18
+        ]
+      ]
+    },
+    {
+      "id": "edge_18",
+      "label": "sequenceFlow",
+      "score": 0.991,
+      "source": "node_20",
+      "target": "node_3",
+      "keypoints": [
+        [
+          3506.26,
+          946.11
+        ],
+        [
+          3581.45,
+          433.09
+        ]
+      ]
+    },
+    {
+      "id": "edge_19",
+      "label": "sequenceFlow",
+      "score": 0.99,
+      "source": null,
+      "target": "node_20",
+      "keypoints": [
+        [
+          3342.58,
+          1179.61
+        ],
+        [
+          3444.53,
+          983.6
+        ]
+      ]
+    },
+    {
+      "id": "edge_20",
+      "label": "sequenceFlow",
+      "score": 0.986,
+      "source": "node_15",
+      "target": "node_4",
+      "keypoints": [
+        [
+          1261.98,
+          784.88
+        ],
+        [
+          1308.6,
+          784.88
+        ]
+      ]
+    },
+    {
+      "id": "edge_21",
+      "label": "sequenceFlow",
+      "score": 0.982,
+      "source": "node_8",
+      "target": null,
+      "keypoints": [
+        [
+          2421.4,
+          954.63
+        ],
+        [
+          2506.87,
+          253.02
+        ]
+      ]
+    },
+    {
+      "id": "edge_22",
+      "label": "sequenceFlow",
+      "score": 0.975,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          827.18,
+          453.3
+        ],
+        [
+          827.18,
+          453.3
+        ]
+      ]
+    },
+    {
+      "id": "edge_23",
+      "label": "sequenceFlow",
+      "score": 0.971,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          1985.8,
+          828.22
+        ],
+        [
+          1985.8,
+          828.22
+        ]
+      ]
+    },
+    {
+      "id": "edge_24",
+      "label": "messageFlow",
+      "score": 0.962,
+      "source": null,
+      "target": "node_13",
+      "keypoints": [
+        [
+          691.98,
+          75.87
+        ],
+        [
+          689.17,
+          415.1
+        ]
+      ]
+    },
+    {
+      "id": "edge_25",
+      "label": "sequenceFlow",
+      "score": 0.951,
+      "source": "node_16",
+      "target": "node_13",
+      "keypoints": [
+        [
+          686.47,
+          571.42
+        ],
+        [
+          689.25,
+          458.23
+        ]
+      ]
+    },
+    {
+      "id": "edge_26",
+      "label": "sequenceFlow",
+      "score": 0.942,
+      "source": "node_21",
+      "target": "node_12",
+      "keypoints": [
+        [
+          3077.64,
+          900.31
+        ],
+        [
+          3199.95,
+          263.43
+        ]
+      ]
+    },
+    {
+      "id": "edge_27",
+      "label": "sequenceFlow",
+      "score": 0.931,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          1993.79,
+          812.36
+        ],
+        [
+          1993.79,
+          812.36
+        ]
+      ]
+    },
+    {
+      "id": "edge_28",
+      "label": "sequenceFlow",
+      "score": 0.926,
+      "source": "node_22",
+      "target": "node_11",
+      "keypoints": [
+        [
+          1983.94,
+          812.88
+        ],
+        [
+          1722.04,
+          1409.2
+        ]
+      ]
+    },
+    {
+      "id": "edge_29",
+      "label": "sequenceFlow",
+      "score": 0.923,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          1720.3,
+          1407.58
+        ],
+        [
+          1720.3,
+          1410.49
+        ]
+      ]
+    },
+    {
+      "id": "edge_30",
+      "label": "messageFlow",
+      "score": 0.873,
+      "source": "node_3",
+      "target": null,
+      "keypoints": [
+        [
+          3645.14,
+          365.23
+        ],
+        [
+          3647.91,
+          67.04
+        ]
+      ]
+    },
+    {
+      "id": "edge_31",
+      "label": "messageFlow",
+      "score": 0.776,
+      "source": null,
+      "target": "node_14",
+      "keypoints": [
+        [
+          3810.94,
+          77.4
+        ],
+        [
+          3813.79,
+          406.31
+        ]
+      ]
+    },
+    {
+      "id": "edge_32",
+      "label": "sequenceFlow",
+      "score": 0.738,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          3339.77,
+          1417.6
+        ],
+        [
+          3183.17,
+          1426.35
+        ]
+      ]
+    },
+    {
+      "id": "edge_33",
+      "label": "sequenceFlow",
+      "score": 0.73,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          1826.11,
+          384.46
+        ],
+        [
+          1820.45,
+          319.34
+        ]
+      ]
+    },
+    {
+      "id": "edge_34",
+      "label": "sequenceFlow",
+      "score": 0.718,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          1209.74,
+          761.7
+        ],
+        [
+          1209.74,
+          761.7
+        ]
+      ]
+    },
+    {
+      "id": "edge_35",
+      "label": "sequenceFlow",
+      "score": 0.574,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          3076.86,
+          901.78
+        ],
+        [
+          3073.96,
+          901.78
+        ]
+      ]
+    },
+    {
+      "id": "edge_36",
+      "label": "dataAssociation",
+      "score": 0.544,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          1809.7,
+          308.04
+        ],
+        [
+          1815.46,
+          308.04
+        ]
+      ]
+    }
+  ],
+  "lanes": [
+    {
+      "id": "lane_0",
+      "label": "pool",
+      "name": "pool_0",
+      "score": 0.831,
+      "box": [
+        1721.54,
+        197.86,
+        3793.53,
+        1489.29
+      ]
+    },
+    {
+      "id": "lane_1",
+      "label": "pool",
+      "name": "pool_1",
+      "score": 0.686,
+      "box": [
+        31.87,
+        163.0,
+        2763.96,
+        357.37
+      ]
+    },
+    {
+      "id": "lane_2",
+      "label": "lane",
+      "name": "lane_2",
+      "score": 0.658,
+      "box": [
+        1331.9,
+        839.58,
+        3805.03,
+        1076.08
+      ]
+    },
+    {
+      "id": "lane_3",
+      "label": "pool",
+      "name": "pool_3",
+      "score": 0.606,
+      "box": [
+        1263.97,
+        1316.77,
+        3888.0,
+        1553.83
+      ]
+    },
+    {
+      "id": "lane_4",
+      "label": "pool",
+      "name": "pool_4",
+      "score": 0.531,
+      "box": [
+        5.97,
+        88.42,
+        2527.78,
+        167.55
+      ]
+    },
+    {
+      "id": "lane_5",
+      "label": "pool",
+      "name": "pool_5",
+      "score": 0.527,
+      "box": [
+        2052.88,
+        852.45,
+        3814.69,
+        1562.0
+      ]
+    }
+  ]
+}

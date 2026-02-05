@@ -1,0 +1,1005 @@
+{
+  "nodes": [
+    {
+      "id": "node_0",
+      "label": "event",
+      "name": "@",
+      "score": 0.999,
+      "box": [
+        1462.08,
+        227.04,
+        1510.76,
+        276.3
+      ],
+      "center": [
+        1486.42,
+        251.67000000000002
+      ],
+      "lane_id": "lane_5"
+    },
+    {
+      "id": "node_1",
+      "label": "event",
+      "name": "-_ Ne",
+      "score": 0.998,
+      "box": [
+        85.53,
+        48.65,
+        135.4,
+        103.79
+      ],
+      "center": [
+        110.465,
+        76.22
+      ],
+      "lane_id": "lane_3"
+    },
+    {
+      "id": "node_2",
+      "label": "parallelGateway",
+      "name": ">",
+      "score": 0.997,
+      "box": [
+        1061.16,
+        94.76,
+        1111.32,
+        147.75
+      ],
+      "center": [
+        1086.24,
+        121.255
+      ],
+      "lane_id": "lane_2"
+    },
+    {
+      "id": "node_3",
+      "label": "messageEvent",
+      "name": "messageEvent_3",
+      "score": 0.996,
+      "box": [
+        807.77,
+        373.37,
+        856.36,
+        422.13
+      ],
+      "center": [
+        832.065,
+        397.75
+      ],
+      "lane_id": "lane_6"
+    },
+    {
+      "id": "node_4",
+      "label": "messageEvent",
+      "name": "messageEvent_4",
+      "score": 0.996,
+      "box": [
+        792.9,
+        201.68,
+        841.27,
+        254.17
+      ],
+      "center": [
+        817.085,
+        227.925
+      ],
+      "lane_id": "lane_5"
+    },
+    {
+      "id": "node_5",
+      "label": "parallelGateway",
+      "name": ">",
+      "score": 0.994,
+      "box": [
+        1351.71,
+        166.58,
+        1401.74,
+        218.88
+      ],
+      "center": [
+        1376.725,
+        192.73000000000002
+      ],
+      "lane_id": "lane_5"
+    },
+    {
+      "id": "node_6",
+      "label": "exclusiveGateway",
+      "name": "®",
+      "score": 0.992,
+      "box": [
+        1007.18,
+        204.77,
+        1056.23,
+        254.33
+      ],
+      "center": [
+        1031.705,
+        229.55
+      ],
+      "lane_id": "lane_5"
+    },
+    {
+      "id": "node_7",
+      "label": "exclusiveGateway",
+      "name": ">",
+      "score": 0.992,
+      "box": [
+        311.54,
+        49.21,
+        361.09,
+        99.05
+      ],
+      "center": [
+        336.315,
+        74.13
+      ],
+      "lane_id": "lane_3"
+    },
+    {
+      "id": "node_8",
+      "label": "messageEvent",
+      "name": "messageEvent_8",
+      "score": 0.989,
+      "box": [
+        283.13,
+        366.83,
+        330.87,
+        420.17
+      ],
+      "center": [
+        307.0,
+        393.5
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_9",
+      "label": "task",
+      "name": "‘Yuacraogats & ‘coamecTHoM penakTupoBaHiy",
+      "score": 0.964,
+      "box": [
+        1152.18,
+        167.06,
+        1243.81,
+        224.72
+      ],
+      "center": [
+        1197.995,
+        195.89
+      ],
+      "lane_id": "lane_5"
+    },
+    {
+      "id": "node_10",
+      "label": "task",
+      "name": "a Cosnars nycryic cTpannuy",
+      "score": 0.957,
+      "box": [
+        402.46,
+        87.7,
+        492.83,
+        149.84
+      ],
+      "center": [
+        447.645,
+        118.77000000000001
+      ],
+      "lane_id": "lane_3"
+    },
+    {
+      "id": "node_11",
+      "label": "task",
+      "name": "fess ixsponna0eart vaMeHeHAR",
+      "score": 0.956,
+      "box": [
+        911.27,
+        370.48,
+        1002.9,
+        432.29
+      ],
+      "center": [
+        957.085,
+        401.385
+      ],
+      "lane_id": "lane_6"
+    },
+    {
+      "id": "node_12",
+      "label": "timerEvent",
+      "name": "timerEvent_12",
+      "score": 0.945,
+      "box": [
+        790.89,
+        56.16,
+        841.07,
+        109.98
+      ],
+      "center": [
+        815.98,
+        83.07
+      ],
+      "lane_id": "lane_3"
+    },
+    {
+      "id": "node_13",
+      "label": "task",
+      "name": "Mpocmarpneare cTpannuy",
+      "score": 0.93,
+      "box": [
+        1150.82,
+        246.73,
+        1241.87,
+        304.82
+      ],
+      "center": [
+        1196.3449999999998,
+        275.775
+      ],
+      "lane_id": "lane_5"
+    },
+    {
+      "id": "node_14",
+      "label": "task",
+      "name": "ka Sanars o6veK1 cTpannupi 8 BD",
+      "score": 0.929,
+      "box": [
+        380.81,
+        365.58,
+        472.92,
+        426.9
+      ],
+      "center": [
+        426.865,
+        396.24
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_15",
+      "label": "task",
+      "name": "AobasuTe avanti kourenT (Texcr, ‘6noKn, cbaiinti),",
+      "score": 0.883,
+      "box": [
+        529.92,
+        51.18,
+        623.21,
+        112.16
+      ],
+      "center": [
+        576.565,
+        81.67
+      ],
+      "lane_id": "lane_3"
+    },
+    {
+      "id": "node_16",
+      "label": "task",
+      "name": "(SOrnpasure Npurnawesna yuacrankan",
+      "score": 0.871,
+      "box": [
+        660.49,
+        367.87,
+        749.97,
+        427.64
+      ],
+      "center": [
+        705.23,
+        397.755
+      ],
+      "lane_id": "lane_6"
+    },
+    {
+      "id": "node_17",
+      "label": "task",
+      "name": "Orkpsrre npurnaweHnyio cTpannuy",
+      "score": 0.871,
+      "box": [
+        869.38,
+        199.98,
+        962.84,
+        260.04
+      ],
+      "center": [
+        916.11,
+        230.01
+      ],
+      "lane_id": "lane_5"
+    },
+    {
+      "id": "node_18",
+      "label": "task",
+      "name": "oN Fpmenuts ui6paHHth wa6now oo",
+      "score": 0.867,
+      "box": [
+        403.33,
+        11.62,
+        494.0,
+        72.23
+      ],
+      "center": [
+        448.66499999999996,
+        41.925000000000004
+      ],
+      "lane_id": "lane_3"
+    },
+    {
+      "id": "node_19",
+      "label": "task",
+      "name": "ICosgare Hoayio cTpannuy",
+      "score": 0.858,
+      "box": [
+        188.49,
+        39.17,
+        279.45,
+        101.61
+      ],
+      "center": [
+        233.97,
+        70.39
+      ],
+      "lane_id": "lane_3"
+    },
+    {
+      "id": "node_20",
+      "label": "task",
+      "name": "CoanecrHoe DenakTuposaHne cTpaHnuss",
+      "score": 0.851,
+      "box": [
+        1152.87,
+        48.22,
+        1241.86,
+        108.56
+      ],
+      "center": [
+        1197.3649999999998,
+        78.39
+      ],
+      "lane_id": "lane_2"
+    },
+    {
+      "id": "node_21",
+      "label": "task",
+      "name": "© Tiparnacirs ysacraikos / yeranoaiets —\"poctynst",
+      "score": 0.773,
+      "box": [
+        662.95,
+        50.56,
+        752.56,
+        111.3
+      ],
+      "center": [
+        707.755,
+        80.93
+      ],
+      "lane_id": "lane_3"
+    },
+    {
+      "id": "node_22",
+      "label": "task",
+      "name": "IpvMeHHTe ‘wa6non J cTpykrypy CTpaHMubl",
+      "score": 0.749,
+      "box": [
+        519.77,
+        367.46,
+        612.34,
+        428.48
+      ],
+      "center": [
+        566.0550000000001,
+        397.97
+      ],
+      "lane_id": "lane_4"
+    },
+    {
+      "id": "node_23",
+      "label": "subProcess",
+      "name": "© Tpurnacut ywacrHnkos / yeraHoaur —” nocrynt",
+      "score": 0.507,
+      "box": [
+        662.39,
+        51.71,
+        752.73,
+        110.76
+      ],
+      "center": [
+        707.56,
+        81.235
+      ],
+      "lane_id": "lane_3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_0",
+      "label": "sequenceFlow",
+      "score": 0.999,
+      "source": "node_6",
+      "target": "node_13",
+      "keypoints": [
+        [
+          1054.01,
+          230.0
+        ],
+        [
+          1156.1,
+          280.31
+        ]
+      ]
+    },
+    {
+      "id": "edge_1",
+      "label": "sequenceFlow",
+      "score": 0.999,
+      "source": "node_19",
+      "target": "node_7",
+      "keypoints": [
+        [
+          281.17,
+          72.77
+        ],
+        [
+          313.78,
+          72.77
+        ]
+      ]
+    },
+    {
+      "id": "edge_2",
+      "label": "sequenceFlow",
+      "score": 0.998,
+      "source": "node_21",
+      "target": "node_12",
+      "keypoints": [
+        [
+          754.87,
+          82.46
+        ],
+        [
+          792.75,
+          82.46
+        ]
+      ]
+    },
+    {
+      "id": "edge_3",
+      "label": "sequenceFlow",
+      "score": 0.998,
+      "source": "node_4",
+      "target": "node_17",
+      "keypoints": [
+        [
+          841.39,
+          228.66
+        ],
+        [
+          871.32,
+          228.66
+        ]
+      ]
+    },
+    {
+      "id": "edge_4",
+      "label": "sequenceFlow",
+      "score": 0.998,
+      "source": "node_5",
+      "target": "node_0",
+      "keypoints": [
+        [
+          1396.93,
+          196.47
+        ],
+        [
+          1460.0,
+          251.62
+        ]
+      ]
+    },
+    {
+      "id": "edge_5",
+      "label": "sequenceFlow",
+      "score": 0.998,
+      "source": "node_17",
+      "target": "node_6",
+      "keypoints": [
+        [
+          964.92,
+          230.59
+        ],
+        [
+          1008.03,
+          230.59
+        ]
+      ]
+    },
+    {
+      "id": "edge_6",
+      "label": "sequenceFlow",
+      "score": 0.998,
+      "source": "node_16",
+      "target": "node_3",
+      "keypoints": [
+        [
+          754.44,
+          398.24
+        ],
+        [
+          808.47,
+          398.24
+        ]
+      ]
+    },
+    {
+      "id": "edge_7",
+      "label": "sequenceFlow",
+      "score": 0.998,
+      "source": "node_9",
+      "target": "node_5",
+      "keypoints": [
+        [
+          1241.73,
+          192.43
+        ],
+        [
+          1356.65,
+          192.43
+        ]
+      ]
+    },
+    {
+      "id": "edge_8",
+      "label": "sequenceFlow",
+      "score": 0.997,
+      "source": "node_14",
+      "target": "node_22",
+      "keypoints": [
+        [
+          474.48,
+          398.24
+        ],
+        [
+          522.11,
+          398.24
+        ]
+      ]
+    },
+    {
+      "id": "edge_9",
+      "label": "sequenceFlow",
+      "score": 0.997,
+      "source": "node_22",
+      "target": "node_16",
+      "keypoints": [
+        [
+          614.4,
+          398.3
+        ],
+        [
+          662.96,
+          398.3
+        ]
+      ]
+    },
+    {
+      "id": "edge_10",
+      "label": "sequenceFlow",
+      "score": 0.997,
+      "source": "node_8",
+      "target": "node_14",
+      "keypoints": [
+        [
+          332.84,
+          394.91
+        ],
+        [
+          379.98,
+          394.91
+        ]
+      ]
+    },
+    {
+      "id": "edge_11",
+      "label": "sequenceFlow",
+      "score": 0.997,
+      "source": "node_15",
+      "target": "node_23",
+      "keypoints": [
+        [
+          624.45,
+          81.58
+        ],
+        [
+          662.92,
+          81.58
+        ]
+      ]
+    },
+    {
+      "id": "edge_12",
+      "label": "sequenceFlow",
+      "score": 0.997,
+      "source": "node_1",
+      "target": "node_19",
+      "keypoints": [
+        [
+          136.35,
+          73.17
+        ],
+        [
+          189.74,
+          73.17
+        ]
+      ]
+    },
+    {
+      "id": "edge_13",
+      "label": "sequenceFlow",
+      "score": 0.997,
+      "source": "node_3",
+      "target": "node_11",
+      "keypoints": [
+        [
+          857.81,
+          398.05
+        ],
+        [
+          910.84,
+          398.05
+        ]
+      ]
+    },
+    {
+      "id": "edge_14",
+      "label": "sequenceFlow",
+      "score": 0.993,
+      "source": "node_2",
+      "target": "node_20",
+      "keypoints": [
+        [
+          1112.69,
+          119.27
+        ],
+        [
+          1152.27,
+          79.58
+        ]
+      ]
+    },
+    {
+      "id": "edge_15",
+      "label": "sequenceFlow",
+      "score": 0.992,
+      "source": "node_10",
+      "target": "node_15",
+      "keypoints": [
+        [
+          497.36,
+          119.01
+        ],
+        [
+          528.42,
+          81.35
+        ]
+      ]
+    },
+    {
+      "id": "edge_16",
+      "label": "messageFlow",
+      "score": 0.991,
+      "source": "node_19",
+      "target": "node_8",
+      "keypoints": [
+        [
+          228.67,
+          111.3
+        ],
+        [
+          308.55,
+          363.12
+        ]
+      ]
+    },
+    {
+      "id": "edge_17",
+      "label": "sequenceFlow",
+      "score": 0.98,
+      "source": "node_12",
+      "target": "node_2",
+      "keypoints": [
+        [
+          843.33,
+          79.4
+        ],
+        [
+          1065.04,
+          119.29
+        ]
+      ]
+    },
+    {
+      "id": "edge_18",
+      "label": "sequenceFlow",
+      "score": 0.972,
+      "source": "node_2",
+      "target": "node_9",
+      "keypoints": [
+        [
+          1123.5,
+          121.02
+        ],
+        [
+          1154.37,
+          193.56
+        ]
+      ]
+    },
+    {
+      "id": "edge_19",
+      "label": "sequenceFlow",
+      "score": 0.964,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          403.47,
+          124.05
+        ],
+        [
+          403.47,
+          124.05
+        ]
+      ]
+    },
+    {
+      "id": "edge_20",
+      "label": "sequenceFlow",
+      "score": 0.961,
+      "source": "node_5",
+      "target": "node_11",
+      "keypoints": [
+        [
+          1409.73,
+          234.61
+        ],
+        [
+          948.24,
+          394.68
+        ]
+      ]
+    },
+    {
+      "id": "edge_21",
+      "label": "sequenceFlow",
+      "score": 0.948,
+      "source": "node_18",
+      "target": "node_15",
+      "keypoints": [
+        [
+          495.58,
+          43.72
+        ],
+        [
+          526.26,
+          77.26
+        ]
+      ]
+    },
+    {
+      "id": "edge_22",
+      "label": "sequenceFlow",
+      "score": 0.937,
+      "source": "node_13",
+      "target": "node_0",
+      "keypoints": [
+        [
+          1241.32,
+          272.25
+        ],
+        [
+          1461.01,
+          252.01
+        ]
+      ]
+    },
+    {
+      "id": "edge_23",
+      "label": "sequenceFlow",
+      "score": 0.899,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          1075.74,
+          217.62
+        ],
+        [
+          1075.74,
+          217.62
+        ]
+      ]
+    },
+    {
+      "id": "edge_24",
+      "label": "sequenceFlow",
+      "score": 0.865,
+      "source": "node_20",
+      "target": "node_5",
+      "keypoints": [
+        [
+          1242.29,
+          79.75
+        ],
+        [
+          1376.67,
+          163.81
+        ]
+      ]
+    },
+    {
+      "id": "edge_25",
+      "label": "sequenceFlow",
+      "score": 0.796,
+      "source": "node_7",
+      "target": "node_18",
+      "keypoints": [
+        [
+          362.19,
+          74.34
+        ],
+        [
+          401.15,
+          37.59
+        ]
+      ]
+    },
+    {
+      "id": "edge_26",
+      "label": "dataAssociation",
+      "score": 0.709,
+      "source": "node_16",
+      "target": "node_4",
+      "keypoints": [
+        [
+          709.77,
+          370.79
+        ],
+        [
+          795.09,
+          231.99
+        ]
+      ]
+    },
+    {
+      "id": "edge_27",
+      "label": "sequenceFlow",
+      "score": 0.697,
+      "source": "node_5",
+      "target": "node_9",
+      "keypoints": [
+        [
+          1355.4,
+          190.47
+        ],
+        [
+          1154.16,
+          190.47
+        ]
+      ]
+    },
+    {
+      "id": "edge_28",
+      "label": "messageFlow",
+      "score": 0.656,
+      "source": "node_16",
+      "target": "node_4",
+      "keypoints": [
+        [
+          708.06,
+          367.68
+        ],
+        [
+          795.3,
+          230.8
+        ]
+      ]
+    }
+  ],
+  "lanes": [
+    {
+      "id": "lane_0",
+      "label": "lane",
+      "name": "H a ‘Ywactaosare 8 . H _ copmecTHon 3 i <> ‘Orkperrs penaxruposani z bees possess 3(FS 7] | npurnawentiyio 8 ; : crpatin Z : : = Panny Her : 1 Tonyweno nparnawenne Ecre npasa Ha Mpocwarpuears : i penakruposasne? crpannuy",
+      "score": 0.99,
+      "box": [
+        38.08,
+        157.14,
+        1273.8,
+        304.68
+      ]
+    },
+    {
+      "id": "lane_1",
+      "label": "pool",
+      "name": "Tobaanre TiparnacnTe as Cosmecruoe H Navan ywacrHnKos / FD) benaxtuposaning H KonTent (reKer, yeranoaiets \\ oy) crpanis H 2] | enor, cain aocTynet we eS : a YuacTeopatb & copmecTHon T oS aay penaxruposani | possess 3(FS 7] | npurnawentiyio H : crpani | H = pany Her + 1 Tonyweno nparnawenne Ecre npasa Ha Mpocuarpuears | H penakruposasne? crpannuy H (GFomeners (Bornpasirs KE & wa6no} npurnawerna { } Vixsponusopary ctpykrypy ywacTHiikam a, vameHeHnn pannus! =",
+      "score": 0.932,
+      "box": [
+        482.95,
+        0.0,
+        1502.15,
+        434.63
+      ]
+    },
+    {
+      "id": "lane_2",
+      "label": "lane",
+      "name": "abit Hi H a6now Tosaawrs Tiparnacurs uo CoanecrHoe H avanti ywacrHnkos / ( \\ penakruposarne, i kouTenT (reKcr, yeraHoaur \\ J cTpaHnust H GnoKu, bavinss) ocTynit SEZ H Te nycTyto| :",
+      "score": 0.919,
+      "box": [
+        435.6,
+        1.57,
+        1503.29,
+        162.81
+      ]
+    },
+    {
+      "id": "lane_3",
+      "label": "lane",
+      "name": "Tpwerre aui6pasnsti £ JCosnas Hosyo Ba |__wa6no Tobaente puna P~ 3 cTpaHnuy wavanbiit ywacrHnkos / ( \\ 3 the owe rer, yeranosuT KJ) 5 oxy, ati rynbs Ne & | onepure patoves i BuGpan | [Coanare nyery pocryn MPeits Pe i wa6n0H? cTpanvuy nnpocrpavicre0 i",
+      "score": 0.902,
+      "box": [
+        29.07,
+        0.0,
+        1050.99,
+        165.26
+      ]
+    },
+    {
+      "id": "lane_4",
+      "label": "lane",
+      "name": "crpyktypy ywacrHiiKam \\ 4 veneer | cTpaHiAubl —",
+      "score": 0.832,
+      "box": [
+        472.28,
+        309.3,
+        1519.35,
+        464.0
+      ]
+    },
+    {
+      "id": "lane_5",
+      "label": "lane",
+      "name": "2 ‘cosMecrHoM H > Onpere penaxrvposanin ! ee | }> npurnawentyio H H crpani i : = pany the i 1 Monyweto npurnawesn Ecre npasa Ha Mpocuarpuears i H penaKtaposanne? cpanmuy H",
+      "score": 0.688,
+      "box": [
+        624.54,
+        152.07,
+        1505.79,
+        307.07
+      ]
+    },
+    {
+      "id": "lane_6",
+      "label": "pool",
+      "name": "(ornpasuns = & mpirnauexin (7) rsponnsosary ywacranicant vaneHenn Tlonysevo vanevienne",
+      "score": 0.6,
+      "box": [
+        600.54,
+        318.61,
+        1489.76,
+        456.6
+      ]
+    },
+    {
+      "id": "lane_7",
+      "label": "pool",
+      "name": "Twente abi6paniti £ Coanare Hoeyio Aa [__wabnow Tobaenre Tipwrnacute a= EH erpannuy avanti ywacTankos / (any Fy Wl owres (rexcr, verano (=) & ior 6noKw, avines) octynst ae s| & | onus pacovee i apa, Poanars myer : ‘npoctpaucreo H ¥ : H 5 H Fy H f— OTKpbITb § Leeeeeeey aa | } >] npurnawarnyio 8 : H ‘cTpaHMLy",
+      "score": 0.545,
+      "box": [
+        10.31,
+        4.51,
+        1050.14,
+        252.04
+      ]
+    }
+  ]
+}

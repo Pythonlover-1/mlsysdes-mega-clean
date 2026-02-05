@@ -1,0 +1,2 @@
+source_id,source_label,source_name,source_lane,target_id,target_label,target_name,target_lane,edge_type,score
+node_1,task,task_1,lane_5,node_0,task,task_0,,sequenceFlow,0.745

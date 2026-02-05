@@ -1,0 +1,27 @@
+# Web framework
+fastapi==0.115.6
+uvicorn==0.34.0
+python-multipart==0.0.18
+pydantic-settings==2.7.1
+
+# ML / Detection
+torch>=2.0.0
+torchvision>=0.15.0
+huggingface_hub>=0.16.0
+
+# OCR
+pytesseract>=0.3.10
+Pillow>=9.0.0
+
+# Image processing
+opencv-python-headless>=4.8.0
+
+# Spell checking for OCR
+wordfreq>=3.0.3
+rapidfuzz>=3.6.2
+
+# Graph operations
+networkx>=3.0
+
+# Monitoring
+psutil>=5.9.0

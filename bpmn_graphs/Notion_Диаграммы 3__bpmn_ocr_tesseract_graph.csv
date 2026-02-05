@@ -1,0 +1,28 @@
+source_id,source_label,source_name,source_lane,target_id,target_label,target_name,target_lane,edge_type,score
+node_21,exclusiveGateway,$,lane_5,node_4,task,Просматривать страницу,lane_5,sequenceFlow,0.999
+node_10,task,Создать новую | страницу,lane_3,node_22,exclusiveGateway,$,lane_3,sequenceFlow,0.999
+node_0,subProcess,Пригласить | участников / установить доступны,lane_3,node_18,timerEvent,©,lane_3,sequenceFlow,0.998
+node_16,messageEvent,(a),lane_5,node_8,task,Открыть приглашённую страницу,lane_5,sequenceFlow,0.998
+node_20,parallelGateway,$,lane_5,node_13,event,(),lane_5,sequenceFlow,0.998
+node_8,task,Открыть приглашённую страницу,lane_5,node_21,exclusiveGateway,$,lane_5,sequenceFlow,0.998
+node_7,task,ROD править приглашения участникам,lane_6,node_15,messageEvent,messageEvent_15,lane_6,sequenceFlow,0.998
+node_1,task,Участвовать в | совместном едактировани,lane_5,node_20,parallelGateway,$,lane_5,sequenceFlow,0.998
+node_5,task,создать объект страницы в БД,,node_12,task,Sot применить шаблон / структуру страницы,lane_4,sequenceFlow,0.997
+node_12,task,Sot применить шаблон / структуру страницы,lane_4,node_7,task,ROD править приглашения участникам,lane_6,sequenceFlow,0.997
+node_17,messageEvent,messageEvent_17,,node_5,task,создать объект страницы в БД,,sequenceFlow,0.997
+node_6,task,Добавить начальный контент (текст, блоки, файлы),lane_3,node_0,subProcess,Пригласить | участников / установить доступны,lane_3,sequenceFlow,0.997
+node_14,event,(),lane_3,node_10,task,Создать новую | страницу,lane_3,sequenceFlow,0.997
+node_15,messageEvent,messageEvent_15,lane_6,node_3,task,Es ихнронизовать изменения,lane_6,sequenceFlow,0.997
+node_19,parallelGateway,+,lane_2,node_11,task,Совместное едактирование страницы,lane_2,sequenceFlow,0.993
+node_2,task,Создать пустую страницу,lane_3,node_6,task,Добавить начальный контент (текст, блоки, файлы),lane_3,sequenceFlow,0.992
+node_10,task,Создать новую | страницу,lane_3,node_17,messageEvent,messageEvent_17,,messageFlow,0.991
+node_18,timerEvent,©,lane_3,node_19,parallelGateway,+,lane_2,sequenceFlow,0.98
+node_19,parallelGateway,+,lane_2,node_1,task,Участвовать в | совместном едактировани,lane_5,sequenceFlow,0.972
+node_20,parallelGateway,$,lane_5,node_3,task,Es ихнронизовать изменения,lane_6,sequenceFlow,0.961
+node_9,task,Применить выбранный шаблон,lane_3,node_6,task,Добавить начальный контент (текст, блоки, файлы),lane_3,sequenceFlow,0.948
+node_4,task,Просматривать страницу,lane_5,node_13,event,(),lane_5,sequenceFlow,0.937
+node_11,task,Совместное едактирование страницы,lane_2,node_20,parallelGateway,$,lane_5,sequenceFlow,0.865
+node_22,exclusiveGateway,$,lane_3,node_9,task,Применить выбранный шаблон,lane_3,sequenceFlow,0.796
+node_7,task,ROD править приглашения участникам,lane_6,node_16,messageEvent,(a),lane_5,dataAssociation,0.709
+node_20,parallelGateway,$,lane_5,node_1,task,Участвовать в | совместном едактировани,lane_5,sequenceFlow,0.697
+node_7,task,ROD править приглашения участникам,lane_6,node_16,messageEvent,(a),lane_5,messageFlow,0.656

@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "id": "node_0",
+      "label": "task",
+      "name": "task_0",
+      "score": 0.782,
+      "box": [
+        158.84,
+        1152.5,
+        362.78,
+        1252.59
+      ],
+      "center": [
+        260.81,
+        1202.545
+      ],
+      "lane_id": "lane_5"
+    },
+    {
+      "id": "node_1",
+      "label": "task",
+      "name": "task_1",
+      "score": 0.558,
+      "box": [
+        87.58,
+        968.92,
+        434.92,
+        1056.99
+      ],
+      "center": [
+        261.25,
+        1012.9549999999999
+      ],
+      "lane_id": "lane_6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_0",
+      "label": "sequenceFlow",
+      "score": 0.662,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          264.44,
+          313.36
+        ],
+        [
+          264.44,
+          395.88
+        ]
+      ]
+    },
+    {
+      "id": "edge_1",
+      "label": "sequenceFlow",
+      "score": 0.621,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          264.47,
+          878.44
+        ],
+        [
+          264.47,
+          961.31
+        ]
+      ]
+    }
+  ],
+  "lanes": [
+    {
+      "id": "lane_0",
+      "label": "pool",
+      "name": "pool_0",
+      "score": 0.945,
+      "box": [
+        37.55,
+        217.47,
+        499.71,
+        304.61
+      ]
+    },
+    {
+      "id": "lane_1",
+      "label": "pool",
+      "name": "pool_1",
+      "score": 0.929,
+      "box": [
+        27.13,
+        595.83,
+        498.35,
+        681.45
+      ]
+    },
+    {
+      "id": "lane_2",
+      "label": "pool",
+      "name": "pool_2",
+      "score": 0.887,
+      "box": [
+        59.42,
+        403.57,
+        481.5,
+        493.52
+      ]
+    },
+    {
+      "id": "lane_3",
+      "label": "pool",
+      "name": "pool_3",
+      "score": 0.874,
+      "box": [
+        56.0,
+        780.16,
+        478.11,
+        868.06
+      ]
+    },
+    {
+      "id": "lane_4",
+      "label": "pool",
+      "name": "pool_4",
+      "score": 0.815,
+      "box": [
+        60.35,
+        24.01,
+        463.49,
+        117.62
+      ]
+    },
+    {
+      "id": "lane_5",
+      "label": "pool",
+      "name": "pool_5",
+      "score": 0.587,
+      "box": [
+        42.49,
+        786.48,
+        508.89,
+        1261.42
+      ]
+    },
+    {
+      "id": "lane_6",
+      "label": "pool",
+      "name": "pool_6",
+      "score": 0.515,
+      "box": [
+        97.73,
+        964.94,
+        430.17,
+        1057.05
+      ]
+    }
+  ]
+}

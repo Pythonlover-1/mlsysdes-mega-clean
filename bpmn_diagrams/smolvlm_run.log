@@ -1,0 +1,50 @@
+2026-02-02 14:57:27,277 [INFO] Found 7 images in /Users/kirill/Projects/mlsysdes-mega/bpmn_diagrams/png
+2026-02-02 14:57:27,306 [INFO] Using Apple MPS GPU
+2026-02-02 14:57:27,307 [INFO] Loading model: HuggingFaceTB/SmolVLM2-2.2B-Instruct
+2026-02-02 14:57:27,307 [INFO] [GPU] before model load — MPS allocated: 0.0 MB
+2026-02-02 14:57:45,736 [INFO] [GPU] after model load — MPS allocated: 4285.4 MB
+2026-02-02 14:57:45,737 [INFO] Model loaded successfully
+2026-02-02 14:57:45,737 [INFO] === Image 1/7 ===
+2026-02-02 14:57:45,737 [INFO] Processing: Notion_Диаграммы 2__bpmn.png
+2026-02-02 14:57:45,737 [INFO] [GPU] before inference — MPS allocated: 4285.4 MB
+2026-02-02 14:59:48,729 [INFO] [GPU] after inference — MPS allocated: 4303.3 MB
+2026-02-02 14:59:48,733 [INFO] Done: Notion_Диаграммы 2__bpmn.png (123.0s)
+2026-02-02 14:59:48,740 [INFO] Saved: /Users/kirill/Projects/mlsysdes-mega/bpmn_diagrams/results/Notion_Диаграммы 2__bpmn.txt
+2026-02-02 14:59:48,741 [INFO] === Image 2/7 ===
+2026-02-02 14:59:48,741 [INFO] Processing: Notion_Диаграммы 3__bpmn.png
+2026-02-02 14:59:48,741 [INFO] [GPU] before inference — MPS allocated: 4285.4 MB
+2026-02-02 15:00:59,485 [INFO] [GPU] after inference — MPS allocated: 4303.3 MB
+2026-02-02 15:00:59,487 [INFO] Done: Notion_Диаграммы 3__bpmn.png (70.7s)
+2026-02-02 15:00:59,494 [INFO] Saved: /Users/kirill/Projects/mlsysdes-mega/bpmn_diagrams/results/Notion_Диаграммы 3__bpmn.txt
+2026-02-02 15:00:59,494 [INFO] === Image 3/7 ===
+2026-02-02 15:00:59,495 [INFO] Processing: Notion_Диаграммы__bpmn.png
+2026-02-02 15:00:59,495 [INFO] [GPU] before inference — MPS allocated: 4285.4 MB
+2026-02-02 15:02:06,265 [INFO] [GPU] after inference — MPS allocated: 4303.3 MB
+2026-02-02 15:02:06,266 [INFO] Done: Notion_Диаграммы__bpmn.png (66.8s)
+2026-02-02 15:02:06,273 [INFO] Saved: /Users/kirill/Projects/mlsysdes-mega/bpmn_diagrams/results/Notion_Диаграммы__bpmn.txt
+2026-02-02 15:02:06,273 [INFO] === Image 4/7 ===
+2026-02-02 15:02:06,274 [INFO] Processing: youtube_Диаграммы__Process.png
+2026-02-02 15:02:06,274 [INFO] [GPU] before inference — MPS allocated: 4285.4 MB
+2026-02-02 15:03:12,250 [INFO] [GPU] after inference — MPS allocated: 4303.3 MB
+2026-02-02 15:03:12,251 [INFO] Done: youtube_Диаграммы__Process.png (66.0s)
+2026-02-02 15:03:12,251 [INFO] Saved: /Users/kirill/Projects/mlsysdes-mega/bpmn_diagrams/results/youtube_Диаграммы__Process.txt
+2026-02-02 15:03:12,252 [INFO] === Image 5/7 ===
+2026-02-02 15:03:12,252 [INFO] Processing: АналогUber_Диаграммы__Process_Order.png
+2026-02-02 15:03:12,252 [INFO] [GPU] before inference — MPS allocated: 4285.4 MB
+2026-02-02 15:04:17,764 [INFO] [GPU] after inference — MPS allocated: 4303.3 MB
+2026-02-02 15:04:17,764 [INFO] Done: АналогUber_Диаграммы__Process_Order.png (65.5s)
+2026-02-02 15:04:17,766 [INFO] Saved: /Users/kirill/Projects/mlsysdes-mega/bpmn_diagrams/results/АналогUber_Диаграммы__Process_Order.txt
+2026-02-02 15:04:17,766 [INFO] === Image 6/7 ===
+2026-02-02 15:04:17,766 [INFO] Processing: ИСУ_Диаграммы 2__BPMN.png
+2026-02-02 15:04:17,766 [INFO] [GPU] before inference — MPS allocated: 4285.4 MB
+2026-02-02 15:05:23,437 [INFO] [GPU] after inference — MPS allocated: 4303.3 MB
+2026-02-02 15:05:23,438 [INFO] Done: ИСУ_Диаграммы 2__BPMN.png (65.7s)
+2026-02-02 15:05:23,442 [INFO] Saved: /Users/kirill/Projects/mlsysdes-mega/bpmn_diagrams/results/ИСУ_Диаграммы 2__BPMN.txt
+2026-02-02 15:05:23,442 [INFO] === Image 7/7 ===
+2026-02-02 15:05:23,442 [INFO] Processing: ИСУ_Диаграммы__BPMN.png
+2026-02-02 15:05:23,442 [INFO] [GPU] before inference — MPS allocated: 4285.4 MB
+2026-02-02 15:06:28,482 [INFO] [GPU] after inference — MPS allocated: 4303.3 MB
+2026-02-02 15:06:28,483 [INFO] Done: ИСУ_Диаграммы__BPMN.png (65.0s)
+2026-02-02 15:06:28,486 [INFO] Saved: /Users/kirill/Projects/mlsysdes-mega/bpmn_diagrams/results/ИСУ_Диаграммы__BPMN.txt
+2026-02-02 15:06:28,486 [INFO] All done. 7 images processed in 522.7s
+2026-02-02 15:06:28,486 [INFO] [GPU] final — MPS allocated: 4285.4 MB

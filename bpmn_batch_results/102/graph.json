@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "id": "node_0",
+      "label": "task",
+      "name": "task_0",
+      "score": 0.768,
+      "box": [
+        158.6,
+        1166.75,
+        354.5,
+        1259.54
+      ],
+      "center": [
+        256.55,
+        1213.145
+      ],
+      "lane_id": null
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_0",
+      "label": "sequenceFlow",
+      "score": 0.534,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          257.64,
+          315.44
+        ],
+        [
+          256.69,
+          394.38
+        ]
+      ]
+    },
+    {
+      "id": "edge_1",
+      "label": "sequenceFlow",
+      "score": 0.509,
+      "source": null,
+      "target": null,
+      "keypoints": [
+        [
+          257.62,
+          536.93
+        ],
+        [
+          256.67,
+          617.13
+        ]
+      ]
+    }
+  ],
+  "lanes": [
+    {
+      "id": "lane_0",
+      "label": "pool",
+      "name": "pool_0",
+      "score": 0.907,
+      "box": [
+        33.73,
+        402.36,
+        479.92,
+        528.64
+      ]
+    },
+    {
+      "id": "lane_1",
+      "label": "pool",
+      "name": "pool_1",
+      "score": 0.854,
+      "box": [
+        29.52,
+        802.26,
+        490.45,
+        894.94
+      ]
+    },
+    {
+      "id": "lane_2",
+      "label": "pool",
+      "name": "pool_2",
+      "score": 0.75,
+      "box": [
+        53.8,
+        33.44,
+        462.78,
+        125.84
+      ]
+    },
+    {
+      "id": "lane_3",
+      "label": "pool",
+      "name": "pool_3",
+      "score": 0.72,
+      "box": [
+        56.08,
+        982.81,
+        455.25,
+        1073.65
+      ]
+    },
+    {
+      "id": "lane_4",
+      "label": "pool",
+      "name": "pool_4",
+      "score": 0.66,
+      "box": [
+        73.71,
+        621.89,
+        423.45,
+        712.06
+      ]
+    },
+    {
+      "id": "lane_5",
+      "label": "pool",
+      "name": "pool_5",
+      "score": 0.524,
+      "box": [
+        82.28,
+        215.4,
+        430.32,
+        304.54
+      ]
+    }
+  ]
+}

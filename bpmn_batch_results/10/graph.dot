@@ -1,0 +1,49 @@
+digraph BPMN {
+  layout=neato;
+  overlap=false;
+  splines=true;
+  node [shape=box, fontsize=10];
+  edge [fontsize=8];
+
+  "node_0" [label="subProcess_0\n(subProcess)", shape=box, style=rounded, fontsize=10, pos="49.68,31.31!", width=2.86, height=2.51, fixedsize=true];
+  "node_1" [label="subProcess_1\n(subProcess)", shape=box, style=rounded, fontsize=10, pos="90.52,17.32!", width=4.70, height=3.18, fixedsize=true];
+  "node_2" [label="subProcess_2\n(subProcess)", shape=box, style=rounded, fontsize=10, pos="49.73,10.84!", width=3.59, height=2.72, fixedsize=true];
+  "node_3" [label="task_3\n(task)", shape=box, fontsize=10, pos="101.36,31.49!", width=4.05, height=2.47, fixedsize=true];
+  "node_4" [label="task_4\n(task)", shape=box, fontsize=10, pos="38.57,21.71!", width=4.43, height=2.43, fixedsize=true];
+  "node_5" [label="task_5\n(task)", shape=box, fontsize=10, pos="25.10,31.07!", width=4.13, height=2.53, fixedsize=true];
+  "node_6" [label="task_6\n(task)", shape=box, fontsize=10, pos="8.22,31.12!", width=3.70, height=3.15, fixedsize=true];
+  "node_7" [label="task_7\n(task)", shape=box, fontsize=10, pos="90.49,3.76!", width=4.43, height=3.33, fixedsize=true];
+  "node_8" [label="task_8\n(task)", shape=box, fontsize=10, pos="65.27,17.31!", width=3.61, height=2.47, fixedsize=true];
+  "node_9" [label="task_9\n(task)", shape=box, fontsize=10, pos="81.32,17.37!", width=3.70, height=2.51, fixedsize=true];
+  "node_10" [label="task_10\n(task)", shape=box, fontsize=10, pos="14.08,26.69!", width=3.34, height=2.36, fixedsize=true];
+  "node_11" [label="task_11\n(task)", shape=box, fontsize=10, pos="49.73,4.08!", width=3.37, height=2.57, fixedsize=true];
+  "node_12" [label="task_12\n(task)", shape=box, fontsize=10, pos="89.80,36.01!", width=5.80, height=3.40, fixedsize=true];
+  "node_13" [label="messageEvent_13\n(messageEvent)", shape=doublecircle, fontsize=10, pos="19.06,31.35!", width=1.25, height=1.27, fixedsize=true];
+  "node_14" [label="messageEvent_14\n(messageEvent)", shape=doublecircle, fontsize=10, pos="106.05,31.40!", width=1.40, height=1.36, fixedsize=true];
+  "node_15" [label="exclusiveGateway_15\n(exclusiveGateway)", shape=diamond, fontsize=10, pos="34.12,21.69!", width=1.98, height=1.94, fixedsize=true];
+  "node_16" [label="exclusiveGateway_16\n(exclusiveGateway)", shape=diamond, fontsize=10, pos="19.05,26.65!", width=1.92, height=1.92, fixedsize=true];
+  "node_17" [label="exclusiveGateway_17\n(exclusiveGateway)", shape=diamond, fontsize=10, pos="61.03,17.26!", width=1.78, height=2.05, fixedsize=true];
+  "node_18" [label="parallelGateway_18\n(parallelGateway)", shape=diamond, fontsize=10, pos="42.99,21.62!", width=1.91, height=1.91, fixedsize=true];
+  "node_19" [label="exclusiveGateway_19\n(exclusiveGateway)", shape=diamond, fontsize=10, pos="75.98,36.20!", width=1.81, height=2.05, fixedsize=true];
+  "node_20" [label="parallelGateway_20\n(parallelGateway)", shape=diamond, fontsize=10, pos="95.83,17.24!", width=1.97, height=2.15, fixedsize=true];
+  "node_21" [label="parallelGateway_21\n(parallelGateway)", shape=diamond, fontsize=10, pos="85.44,17.21!", width=1.91, height=2.07, fixedsize=true];
+  "node_22" [label="parallelGateway_22\n(parallelGateway)", shape=diamond, fontsize=10, pos="55.57,21.61!", width=2.09, height=2.12, fixedsize=true];
+
+  "node_21" -> "node_7" [];
+  "node_7" -> "node_20" [];
+  "node_5" -> "node_15" [];
+  "node_1" -> "node_20" [];
+  "node_22" -> "node_17" [];
+  "node_9" -> "node_21" [];
+  "node_3" -> "node_14" [];
+  "node_6" -> "node_10" [];
+  "node_20" -> "node_12" [];
+  "node_21" -> "node_1" [];
+  "node_17" -> "node_8" [];
+  "node_18" -> "node_0" [];
+  "node_20" -> "node_3" [];
+  "node_15" -> "node_4" [];
+  "node_16" -> "node_13" [];
+  "node_21" -> "node_12" [];
+  "node_22" -> "node_11" [];
+}
