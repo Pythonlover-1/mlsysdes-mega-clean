@@ -1,0 +1,14 @@
+digraph BPMN {
+  layout=neato;
+  overlap=false;
+  splines=true;
+  node [shape=box, fontsize=10];
+  edge [fontsize=8];
+
+  "node_0" [label="Конвертацияв WAV\n(block)", shape=box, fontsize=10, pos="4.83,3.04!", width=9.22, height=3.86, fixedsize=true];
+  "node_1" [label="Скоринг\n(block)", shape=box, fontsize=10, pos="28.64,3.14!", width=8.06, height=4.62, fixedsize=true];
+  "node_2" [label="Транскрибация\n(block)", shape=box, fontsize=10, pos="16.99,2.61!", width=8.32, height=4.38, fixedsize=true];
+
+  "node_0" -> "node_2" [];
+  "node_2" -> "node_1" [];
+}

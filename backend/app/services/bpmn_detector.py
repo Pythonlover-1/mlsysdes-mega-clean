@@ -119,7 +119,7 @@ def _dilate_lines(image: Image.Image, dilate_px: int) -> Image.Image:
     Returns:
         PIL Image with dilated lines
     """
-    if dilate_px <= 0 or True:
+    if dilate_px <= 0:
         return image
 
     # Convert to numpy array

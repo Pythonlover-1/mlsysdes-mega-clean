@@ -24,14 +24,14 @@ class ConversionParams(BaseModel):
     ocr_upscale: int = Field(2, ge=1, le=4, description="Upscale factor for OCR crops")
     ocr_binarize: bool = Field(False, description="Binarize image before OCR")
     ocr_binarize_thr: int = Field(170, ge=0, le=255, description="Threshold for binarization")
-    ocr_denoise: bool = Field(True, description="Apply median filter to reduce noise")
+    ocr_denoise: bool = Field(False, description="Apply median filter to reduce noise (can blur small text)")
     ocr_noisy_mode: bool = Field(False, description="Auto-detect noisy images and apply stronger cleanup")
     ocr_noisy_std: float = Field(35.0, ge=0.0, description="Std threshold for noisy image detection")
 
     # OCR crop settings
     ocr_inset_px: int = Field(2, ge=0, description="Inset padding in pixels to reduce border noise")
     ocr_inset_pct: float = Field(0.02, ge=0.0, le=0.5, description="Inset padding as percentage of box size")
-    ocr_loose_scale: float = Field(1.1, ge=1.0, le=2.0, description="Scale factor for loose crop fallback (1.0 = no expansion)")
+    ocr_loose_scale: float = Field(0.0, ge=0.0, le=2.0, description="Scale factor for loose crop fallback (0.0 = disabled)")
 
     # OCR Tesseract
     ocr_lang: str = Field("eng+rus", description="Tesseract language codes")

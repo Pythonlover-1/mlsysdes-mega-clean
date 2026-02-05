@@ -50,13 +50,13 @@ def get_conversion_params(
     ocr_upscale: Annotated[int, Query(ge=1, le=4, description="Upscale factor for OCR crops")] = 2,
     ocr_binarize: Annotated[bool, Query(description="Binarize image before OCR")] = False,
     ocr_binarize_thr: Annotated[int, Query(ge=0, le=255, description="Threshold for binarization")] = 170,
-    ocr_denoise: Annotated[bool, Query(description="Apply median filter to reduce noise")] = True,
+    ocr_denoise: Annotated[bool, Query(description="Apply median filter to reduce noise")] = False,
     ocr_noisy_mode: Annotated[bool, Query(description="Auto-detect noisy images")] = False,
     ocr_noisy_std: Annotated[float, Query(ge=0.0, description="Std threshold for noisy detection")] = 35.0,
     # OCR crop settings
     ocr_inset_px: Annotated[int, Query(ge=0, description="Inset padding in pixels")] = 2,
     ocr_inset_pct: Annotated[float, Query(ge=0.0, le=0.5, description="Inset padding as percentage")] = 0.02,
-    ocr_loose_scale: Annotated[float, Query(ge=1.0, le=2.0, description="Scale factor for loose crop (1.0 = no expansion)")] = 1.1,
+    ocr_loose_scale: Annotated[float, Query(ge=0.0, le=2.0, description="Scale factor for loose crop (0.0 = disabled)")] = 0.0,
     # OCR Tesseract
     ocr_lang: Annotated[str, Query(description="Tesseract language codes")] = "eng+rus",
     ocr_psm_list: Annotated[str, Query(description="Comma-separated PSM modes to try")] = "6,7",

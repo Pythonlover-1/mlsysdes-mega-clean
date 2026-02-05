@@ -1,0 +1,194 @@
+{
+  "nodes": [
+    {
+      "id": "node_0",
+      "label": "block",
+      "name": "Финиш",
+      "score": 0.851,
+      "box": [
+        146.37,
+        1161.09,
+        341.37,
+        1258.29
+      ],
+      "center": [
+        243.87,
+        1209.69
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_1",
+      "label": "block",
+      "name": "Интеграция с Prometheus",
+      "score": 0.844,
+      "box": [
+        16.76,
+        391.86,
+        475.07,
+        481.08
+      ],
+      "center": [
+        245.915,
+        436.47
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_2",
+      "label": "block",
+      "name": "Установка PostgreSQL",
+      "score": 0.793,
+      "box": [
+        49.73,
+        27.83,
+        438.07,
+        119.13
+      ],
+      "center": [
+        243.9,
+        73.47999999999999
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_3",
+      "label": "block",
+      "name": "Настройка экспорта",
+      "score": 0.785,
+      "box": [
+        35.29,
+        208.91,
+        456.54,
+        301.01
+      ],
+      "center": [
+        245.91500000000002,
+        254.95999999999998
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_4",
+      "label": "block",
+      "name": "Настройка алертимнга",
+      "score": 0.747,
+      "box": [
+        50.39,
+        797.4,
+        441.8,
+        887.51
+      ],
+      "center": [
+        246.095,
+        842.4549999999999
+      ],
+      "lane_id": null
+    },
+    {
+      "id": "node_5",
+      "label": "block",
+      "name": "Тест мониторинга",
+      "score": 0.523,
+      "box": [
+        74.2,
+        985.46,
+        419.98,
+        1072.54
+      ],
+      "center": [
+        247.09,
+        1029.0
+      ],
+      "lane_id": null
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_0",
+      "label": "arrow",
+      "score": 0.745,
+      "source": "node_5",
+      "target": "node_0",
+      "keypoints": [
+        [
+          246.22,
+          1082.07
+        ],
+        [
+          246.22,
+          1160.01
+        ]
+      ]
+    },
+    {
+      "id": "edge_1",
+      "label": "arrow",
+      "score": 0.731,
+      "source": "node_1",
+      "target": null,
+      "keypoints": [
+        [
+          246.85,
+          490.17
+        ],
+        [
+          245.94,
+          572.85
+        ]
+      ]
+    },
+    {
+      "id": "edge_2",
+      "label": "arrow",
+      "score": 0.647,
+      "source": "node_2",
+      "target": "node_3",
+      "keypoints": [
+        [
+          246.08,
+          131.42
+        ],
+        [
+          246.08,
+          209.12
+        ]
+      ]
+    },
+    {
+      "id": "edge_3",
+      "label": "arrow",
+      "score": 0.64,
+      "source": "node_4",
+      "target": "node_5",
+      "keypoints": [
+        [
+          246.29,
+          898.66
+        ],
+        [
+          246.29,
+          978.69
+        ]
+      ]
+    },
+    {
+      "id": "edge_4",
+      "label": "arrow",
+      "score": 0.551,
+      "source": "node_3",
+      "target": "node_1",
+      "keypoints": [
+        [
+          246.74,
+          309.4
+        ],
+        [
+          245.81,
+          390.8
+        ]
+      ]
+    }
+  ],
+  "lanes": []
+}

@@ -365,13 +365,13 @@ export default function ParametersPanel() {
           />
           <Slider
             label="Расширение bbox"
-            description="Во сколько раз расширить область для OCR (1.0 = без расширения)"
+            description="Во сколько раз расширить область для OCR (0.0 = отключено)"
             value={params.ocr_loose_scale}
             onChange={(v) => setParams({ ocr_loose_scale: v })}
-            min={1.0}
+            min={0.0}
             max={2.0}
             step={0.05}
-            displayValue={`${params.ocr_loose_scale.toFixed(2)}x`}
+            displayValue={params.ocr_loose_scale === 0 ? 'Отключено' : `${params.ocr_loose_scale.toFixed(2)}x`}
           />
         </Section>
 

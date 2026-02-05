@@ -1,0 +1,3 @@
+source_id,source_label,source_name,source_lane,target_id,target_label,target_name,target_lane,edge_type,score
+node_0,block,Конвертацияв WAV,,node_2,block,Транскрибация,,arrow,0.947
+node_2,block,Транскрибация,,node_1,block,Скоринг,,arrow,0.894

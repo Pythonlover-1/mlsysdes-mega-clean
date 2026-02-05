@@ -1,0 +1,19 @@
+digraph BPMN {
+  layout=neato;
+  overlap=false;
+  splines=true;
+  node [shape=box, fontsize=10];
+  edge [fontsize=8];
+
+  "node_0" [label="Финиш\n(block)", shape=box, fontsize=10, pos="3.39,0.92!", width=2.71, height=1.35, fixedsize=true];
+  "node_1" [label="Интеграция с Prometheus\n(block)", shape=box, fontsize=10, pos="3.42,11.66!", width=6.37, height=1.24, fixedsize=true];
+  "node_2" [label="Установка PostgreSQL\n(block)", shape=box, fontsize=10, pos="3.39,16.70!", width=5.39, height=1.27, fixedsize=true];
+  "node_3" [label="Настройка экспорта\n(block)", shape=box, fontsize=10, pos="3.42,14.18!", width=5.85, height=1.28, fixedsize=true];
+  "node_4" [label="Настройка алертимнга\n(block)", shape=box, fontsize=10, pos="3.42,6.02!", width=5.44, height=1.25, fixedsize=true];
+  "node_5" [label="Тест мониторинга\n(block)", shape=box, fontsize=10, pos="3.43,3.43!", width=4.80, height=1.21, fixedsize=true];
+
+  "node_5" -> "node_0" [];
+  "node_2" -> "node_3" [];
+  "node_4" -> "node_5" [];
+  "node_3" -> "node_1" [];
+}

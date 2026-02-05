@@ -1,0 +1,5 @@
+source_id,source_label,source_name,source_lane,target_id,target_label,target_name,target_lane,edge_type,score
+node_5,block,Тест мониторинга,,node_0,block,Финиш,,arrow,0.745
+node_2,block,Установка PostgreSQL,,node_3,block,Настройка экспорта,,arrow,0.647
+node_4,block,Настройка алертимнга,,node_5,block,Тест мониторинга,,arrow,0.64
+node_3,block,Настройка экспорта,,node_1,block,Интеграция с Prometheus,,arrow,0.551

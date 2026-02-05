@@ -93,14 +93,14 @@ export interface ConversionParams {
   ocr_upscale: number; // 1-4, default 2
   ocr_binarize: boolean; // default false
   ocr_binarize_thr: number; // 0-255, default 170
-  ocr_denoise: boolean; // default true
+  ocr_denoise: boolean; // default false (can blur small text)
   ocr_noisy_mode: boolean; // default false
   ocr_noisy_std: number; // >=0, default 35.0
 
   // OCR crop settings
   ocr_inset_px: number; // >=0, default 2
   ocr_inset_pct: number; // 0.0-0.5, default 0.02
-  ocr_loose_scale: number; // 1.0-2.0, default 1.1 (scale factor for expanded crop)
+  ocr_loose_scale: number; // 0.0-2.0, default 0.0 (0.0 = disabled, was causing text cutoff)
 
   // OCR Tesseract
   ocr_lang: string; // default "eng+rus"
@@ -130,12 +130,12 @@ export const DEFAULT_CONVERSION_PARAMS: ConversionParams = {
   ocr_upscale: 2,
   ocr_binarize: false,
   ocr_binarize_thr: 170,
-  ocr_denoise: true,
+  ocr_denoise: false,
   ocr_noisy_mode: false,
   ocr_noisy_std: 35.0,
   ocr_inset_px: 2,
   ocr_inset_pct: 0.02,
-  ocr_loose_scale: 1.1,
+  ocr_loose_scale: 0.0,
   ocr_lang: 'eng+rus',
   ocr_psm_list: '6,7',
   ocr_oem: 1,

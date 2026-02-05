@@ -412,7 +412,7 @@ class OCRParams:
     # Crop settings
     inset_px: int = 2
     inset_pct: float = 0.02
-    loose_scale: float = 1.1
+    loose_scale: float = 0.0  # Disabled: was causing text cutoff
 
     # Tesseract
     lang: str = "eng+rus"
@@ -448,13 +448,13 @@ def _ocr_text_in_box(
     x1, y1, x2, y2 = box
     w, h = image.size
 
-    # Inset crop to reduce border noise
-    inset_x = max(ocr_params.inset_px, int((x2 - x1) * ocr_params.inset_pct))
-    inset_y = max(ocr_params.inset_px, int((y2 - y1) * ocr_params.inset_pct))
-    left = max(int(x1) + inset_x, 0)
-    top = max(int(y1) + inset_y, 0)
-    right = min(int(x2) - inset_x, w - 1)
-    bottom = min(int(y2) - inset_y, h - 1)
+    # Expand crop to capture full text (padding instead of inset)
+    pad_x = max(2, int((x2 - x1) * 0.04))
+    pad_y = max(2, int((y2 - y1) * 0.04))
+    left = max(int(x1) - pad_x, 0)
+    top = max(int(y1) - pad_y, 0)
+    right = min(int(x2) + pad_x, w - 1)
+    bottom = min(int(y2) + pad_y, h - 1)
 
     if right <= left or bottom <= top:
         return ""
