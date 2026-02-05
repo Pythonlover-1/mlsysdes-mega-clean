@@ -12,7 +12,7 @@ Full-stack приложение для конвертации изображен
 - **Frontend**: React, TypeScript, Vite, Tailwind CSS
 - **Инфра**: Docker, Docker Compose, Nginx
 
-## Запуск
+## Локальный запуск
 
 ```bash
 docker compose up --build
