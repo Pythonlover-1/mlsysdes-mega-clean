@@ -33,6 +33,9 @@ class ConversionParams(BaseModel):
     ocr_inset_pct: float = Field(0.02, ge=0.0, le=0.5, description="Inset padding as percentage of box size")
     ocr_loose_scale: float = Field(0.0, ge=0.0, le=2.0, description="Scale factor for loose crop fallback (0.0 = disabled)")
 
+    # OCR lane/pool
+    ocr_lane_top_pct: float = Field(0.05, ge=0.05, le=1.0, description="After rotating lane 90° CW, keep top X% for OCR")
+
     # OCR Tesseract
     ocr_lang: str = Field("eng+rus", description="Tesseract language codes")
     ocr_psm_list: str = Field("6,7", description="Comma-separated PSM modes to try")

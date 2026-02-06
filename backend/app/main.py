@@ -57,6 +57,8 @@ def get_conversion_params(
     ocr_inset_px: Annotated[int, Query(ge=0, description="Inset padding in pixels")] = 2,
     ocr_inset_pct: Annotated[float, Query(ge=0.0, le=0.5, description="Inset padding as percentage")] = 0.02,
     ocr_loose_scale: Annotated[float, Query(ge=0.0, le=2.0, description="Scale factor for loose crop (0.0 = disabled)")] = 0.0,
+    # OCR lane/pool
+    ocr_lane_top_pct: Annotated[float, Query(ge=0.05, le=1.0, description="After rotating lane 90° CW, keep top X%")] = 0.05,
     # OCR Tesseract
     ocr_lang: Annotated[str, Query(description="Tesseract language codes")] = "eng+rus",
     ocr_psm_list: Annotated[str, Query(description="Comma-separated PSM modes to try")] = "6,7",
@@ -92,6 +94,7 @@ def get_conversion_params(
         ocr_inset_px=ocr_inset_px,
         ocr_inset_pct=ocr_inset_pct,
         ocr_loose_scale=ocr_loose_scale,
+        ocr_lane_top_pct=ocr_lane_top_pct,
         ocr_lang=ocr_lang,
         ocr_psm_list=ocr_psm_list,
         ocr_oem=ocr_oem,
@@ -148,6 +151,7 @@ async def convert(
             inset_px=params.ocr_inset_px,
             inset_pct=params.ocr_inset_pct,
             loose_scale=params.ocr_loose_scale,
+            lane_top_pct=params.ocr_lane_top_pct,
             lang=params.ocr_lang,
             psm_list=params.ocr_psm_list,
             oem=params.ocr_oem,

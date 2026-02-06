@@ -373,6 +373,16 @@ export default function ParametersPanel() {
             step={0.05}
             displayValue={params.ocr_loose_scale === 0 ? 'Отключено' : `${params.ocr_loose_scale.toFixed(2)}x`}
           />
+          <Slider
+            label="Lane/Pool: верхняя часть"
+            description="После поворота lane на 90° по часовой — какой % изображения оставить для OCR"
+            value={params.ocr_lane_top_pct}
+            onChange={(v) => setParams({ ocr_lane_top_pct: v })}
+            min={0.05}
+            max={1.0}
+            step={0.05}
+            displayValue={`${Math.round(params.ocr_lane_top_pct * 100)}%`}
+          />
         </Section>
 
         {/* OCR Tesseract Section */}

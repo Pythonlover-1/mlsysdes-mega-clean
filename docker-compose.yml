@@ -3,14 +3,12 @@ services:
     build: ./backend
     ports:
       - "8000:8000"
-    deploy:
-      resources:
-        limits:
-          memory: 4G
 
   frontend:
     build: ./frontend
     ports:
       - "3000:80"
+    environment:
+      - BACKEND_URL=${BACKEND_URL:-http://backend:8000}
     depends_on:
       - backend

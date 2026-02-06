@@ -1,0 +1,18 @@
+services:
+  backend:
+    image: bpmn-backend:latest
+    container_name: bpmn-backend
+    ports:
+      - "8001:8000"
+    restart: unless-stopped
+
+  frontend:
+    image: bpmn-frontend:latest
+    container_name: bpmn-frontend
+    ports:
+      - "3001:80"
+    environment:
+      - BACKEND_URL=${BACKEND_URL:-http://backend:8000}
+    depends_on:
+      - backend
+    restart: unless-stopped

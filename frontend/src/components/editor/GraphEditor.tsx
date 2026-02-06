@@ -546,7 +546,7 @@ export default function GraphEditor() {
   }
 
   return (
-    <div className="w-full h-full rounded-2xl border border-slate-700/50 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 overflow-hidden shadow-2xl">
+    <div className="w-full h-full bg-slate-900 overflow-hidden">
       <ReactFlow
         nodes={nodesWithSelection}
         edges={edges}

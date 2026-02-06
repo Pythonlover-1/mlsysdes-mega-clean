@@ -12,7 +12,7 @@ import type {
 import { DEFAULT_CONVERSION_PARAMS } from '../types';
 
 const HISTORY_KEY = 'csv-history';
-const MAX_HISTORY = 50;
+const MAX_HISTORY = 10;
 
 function isValidHistoryItem(item: unknown): item is ConversionResult {
   if (!item || typeof item !== 'object') return false;
@@ -38,7 +38,17 @@ function loadHistory(): ConversionResult[] {
 }
 
 function saveHistory(history: ConversionResult[]) {
-  localStorage.setItem(HISTORY_KEY, JSON.stringify(history.slice(0, MAX_HISTORY)));
+  const items = history.slice(0, MAX_HISTORY);
+  for (let i = items.length; i >= 1; i--) {
+    try {
+      localStorage.setItem(HISTORY_KEY, JSON.stringify(items.slice(0, i)));
+      return;
+    } catch {
+      // quota exceeded — try with fewer items
+    }
+  }
+  // nothing fits — clear
+  localStorage.removeItem(HISTORY_KEY);
 }
 
 function fileToDataUrl(file: File): Promise<string> {

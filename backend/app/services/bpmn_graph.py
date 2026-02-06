@@ -430,6 +430,9 @@ class OCRParams:
     spellcheck_score: float = 88.0
     user_vocab: str = ""
 
+    # Lane/pool OCR
+    lane_top_pct: float = 0.05  # After rotating 90° CW, keep top X% for OCR
+
     # Debug
     debug_dir: str = ""
 
@@ -529,6 +532,87 @@ def _ocr_text_in_box(
         )
         if loose_conf > tess_conf or (loose_conf == tess_conf and len(loose_text) > len(tess_text)):
             tess_text, tess_conf = loose_text, loose_conf
+
+    if ocr_params.fix_typos:
+        tess_text = _fix_ocr_typos(
+            tess_text,
+            ocr_params.spellcheck,
+            ocr_params.spellcheck_topn,
+            ocr_params.spellcheck_min_zipf,
+            ocr_params.spellcheck_score
+        )
+    return tess_text
+
+
+def _ocr_text_in_lane(
+    image: Image.Image,
+    box: List[float],
+    ocr_params: Optional[OCRParams] = None
+) -> str:
+    """Run OCR on a lane/pool: rotate 90° CW, keep top X%, then OCR."""
+    if image is None:
+        return ""
+    if ocr_params is None:
+        ocr_params = OCRParams()
+
+    x1, y1, x2, y2 = box
+    w, h = image.size
+
+    # Crop the bbox with small padding
+    pad_x = max(2, int((x2 - x1) * 0.04))
+    pad_y = max(2, int((y2 - y1) * 0.04))
+    left = max(int(x1) - pad_x, 0)
+    top = max(int(y1) - pad_y, 0)
+    right = min(int(x2) + pad_x, w - 1)
+    bottom = min(int(y2) + pad_y, h - 1)
+
+    if right <= left or bottom <= top:
+        return ""
+
+    crop = image.crop((left, top, right, bottom))
+
+    # Rotate 90° clockwise (left side becomes top)
+    crop = crop.rotate(-90, expand=True)
+
+    # Keep only top X% of the rotated image
+    pct = max(0.05, min(1.0, ocr_params.lane_top_pct))
+    crop_h = crop.size[1]
+    cut_y = int(crop_h * pct)
+    if cut_y < 10:
+        cut_y = min(crop_h, 10)
+    crop = crop.crop((0, 0, crop.size[0], cut_y))
+
+    # Preprocess and OCR
+    crop = _preprocess_crop(
+        crop,
+        ocr_params.upscale,
+        ocr_params.binarize,
+        ocr_params.binarize_thr,
+        ocr_params.denoise,
+        ocr_params.noisy_mode,
+        ocr_params.noisy_std
+    )
+
+    # Save debug crops if requested
+    if ocr_params.debug_dir:
+        import os
+        import uuid
+        try:
+            os.makedirs(ocr_params.debug_dir, exist_ok=True)
+            uid = uuid.uuid4().hex[:8]
+            crop.save(os.path.join(ocr_params.debug_dir, f"{uid}_lane_rotated.png"))
+        except Exception:
+            pass
+
+    tess_text, tess_conf = _tesseract_ocr(
+        crop,
+        ocr_params.lang,
+        ocr_params.psm_list,
+        ocr_params.oem,
+        ocr_params.tesseract_config,
+        ocr_params.tesseract_whitelist,
+        ocr_params.tesseract_whitelist_lang
+    )
 
     if ocr_params.fix_typos:
         tess_text = _fix_ocr_typos(
@@ -738,7 +822,7 @@ def detections_to_graph(
         for i, cont in enumerate(containers):
             name = f"{cont['label']}_{i}"
             if image is not None:
-                ocr_text = _ocr_text_in_box(image, cont["box"], params.ocr)
+                ocr_text = _ocr_text_in_lane(image, cont["box"], params.ocr)
                 if ocr_text:
                     name = ocr_text
             lane = BPMNLane(

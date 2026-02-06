@@ -102,6 +102,9 @@ export interface ConversionParams {
   ocr_inset_pct: number; // 0.0-0.5, default 0.02
   ocr_loose_scale: number; // 0.0-2.0, default 0.0 (0.0 = disabled, was causing text cutoff)
 
+  // OCR lane/pool
+  ocr_lane_top_pct: number; // 0.05-1.0, default 0.05 - after rotating lane 90° CW, keep top X%
+
   // OCR Tesseract
   ocr_lang: string; // default "eng+rus"
   ocr_psm_list: string; // default "6,7"
@@ -136,6 +139,7 @@ export const DEFAULT_CONVERSION_PARAMS: ConversionParams = {
   ocr_inset_px: 2,
   ocr_inset_pct: 0.02,
   ocr_loose_scale: 0.0,
+  ocr_lane_top_pct: 0.05,
   ocr_lang: 'eng+rus',
   ocr_psm_list: '6,7',
   ocr_oem: 1,
