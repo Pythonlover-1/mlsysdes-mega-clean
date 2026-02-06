@@ -15,6 +15,7 @@ import {
   MarkerType,
   type Connection,
   addEdge,
+  ConnectionMode,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
@@ -419,6 +420,7 @@ export default function GraphEditor() {
   const setSelectedNodeId = useAppStore((s) => s.setSelectedNodeId);
   const getImageNodePosition = useAppStore((s) => s.getImageNodePosition);
   const setImageNodePosition = useAppStore((s) => s.setImageNodePosition);
+  const [selectedEdgeId, setSelectedEdgeId] = useState<string | null>(null);
 
   const handleLabelChange = useCallback(
     (nodeId: string, newLabel: string) => {
@@ -490,14 +492,48 @@ export default function GraphEditor() {
   const handleNodeClick = useCallback(
     (_event: React.MouseEvent, node: Node) => {
       if (node.id === '__background_image__') return;
+      setSelectedEdgeId(null);
       setSelectedNodeId(selectedNodeId === node.id ? null : node.id);
     },
     [setSelectedNodeId, selectedNodeId]
   );
 
   const handlePaneClick = useCallback(() => {
+    setSelectedEdgeId(null);
     setSelectedNodeId(null);
   }, [setSelectedNodeId]);
+
+  const handleEdgeClick = useCallback((event: React.MouseEvent, edge: Edge) => {
+    event.stopPropagation();
+    setSelectedNodeId(null);
+    setSelectedEdgeId(edge.id);
+  }, [setSelectedNodeId]);
+
+  const deleteSelectedEdge = useCallback(() => {
+    if (!currentDocument || !selectedEdgeId) return;
+    const newGraph = {
+      ...currentDocument.graph,
+      edges: currentDocument.graph.edges.filter((e) => e.id !== selectedEdgeId),
+    };
+    updateGraph(newGraph);
+    setEdges((eds) => eds.filter((e) => e.id !== selectedEdgeId));
+    setSelectedEdgeId(null);
+  }, [currentDocument, selectedEdgeId, updateGraph, setEdges]);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (!selectedEdgeId) return;
+      const target = event.target as HTMLElement | null;
+      const isTyping = target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable);
+      if (isTyping) return;
+      if (event.key === 'Delete' || event.key === 'Backspace') {
+        event.preventDefault();
+        deleteSelectedEdge();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedEdgeId, deleteSelectedEdge]);
 
   // Handle creating new edges
   const onConnect = useCallback(
@@ -545,17 +581,45 @@ export default function GraphEditor() {
     );
   }
 
+  const isSimpleDiagram = (currentDocument.graph.lanes || []).length === 0;
+
+  const edgesWithSelection = useMemo(
+    () =>
+      edges.map((edge) => ({
+        ...edge,
+        selected: edge.id === selectedEdgeId,
+        style: edge.id === selectedEdgeId
+          ? { ...edge.style, strokeWidth: 4 }
+          : edge.style,
+      })),
+    [edges, selectedEdgeId]
+  );
+
   return (
-    <div className="w-full h-full bg-slate-900 overflow-hidden">
+    <div className="w-full h-full bg-slate-900 overflow-hidden relative">
+      {selectedEdgeId && (
+        <div className="absolute top-4 right-48 z-10">
+          <button
+            onClick={deleteSelectedEdge}
+            className="px-3 py-2 text-xs bg-gradient-to-r from-rose-500 to-red-500 text-white rounded-lg hover:from-rose-400 hover:to-red-400 transition-all shadow-lg"
+            title="Удалить выбранную стрелку (Delete)"
+          >
+            Удалить стрелку
+          </button>
+        </div>
+      )}
       <ReactFlow
         nodes={nodesWithSelection}
-        edges={edges}
+        edges={edgesWithSelection}
         onNodesChange={handleNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
         nodeTypes={nodeTypes}
         onNodeClick={handleNodeClick}
+        onEdgeClick={handleEdgeClick}
         onPaneClick={handlePaneClick}
+        connectionMode={isSimpleDiagram ? ConnectionMode.Loose : ConnectionMode.Strict}
+        connectOnClick={isSimpleDiagram}
         fitView
         fitViewOptions={{ padding: 0.3 }}
         minZoom={0.1}

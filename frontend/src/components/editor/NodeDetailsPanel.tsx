@@ -1,10 +1,26 @@
+import { useCallback, useEffect, useState } from 'react';
 import { useAppStore } from '../../store';
 import FloatingPanel from '../shared/FloatingPanel';
 import CroppedImage from './CroppedImage';
 import type { BPMNNode, BPMNGraph } from '../../types';
 
-function NodeDetails({ node, lanes, imageDataUrl }: { node: BPMNNode; lanes: BPMNGraph['lanes']; imageDataUrl: string }) {
+function NodeDetails({
+  node,
+  lanes,
+  imageDataUrl,
+  onLaneNameChange,
+}: {
+  node: BPMNNode;
+  lanes: BPMNGraph['lanes'];
+  imageDataUrl: string;
+  onLaneNameChange: (laneId: string, newName: string) => void;
+}) {
   const lane = node.lane_id ? lanes.find((l) => l.id === node.lane_id) : null;
+  const [laneName, setLaneName] = useState(lane?.name || lane?.label || '');
+
+  useEffect(() => {
+    setLaneName(lane?.name || lane?.label || '');
+  }, [lane?.id, lane?.name, lane?.label]);
 
   const getLabelColor = (label: string) => {
     if (label.includes('task') || label.includes('subProcess')) return 'text-cyan-400 bg-cyan-500/20';
@@ -76,7 +92,26 @@ function NodeDetails({ node, lanes, imageDataUrl }: { node: BPMNNode; lanes: BPM
         <div>
           <label className="text-xs text-slate-500 uppercase tracking-wider">Дорожка (Lane)</label>
           <div className="mt-1 p-2 bg-violet-500/10 border border-violet-500/30 rounded-lg">
-            <p className="text-violet-300 text-sm font-medium">{lane.name || lane.label}</p>
+            <input
+              type="text"
+              value={laneName}
+              onChange={(e) => setLaneName(e.target.value)}
+              onBlur={() => {
+                if (laneName !== (lane.name || lane.label || '')) {
+                  onLaneNameChange(lane.id, laneName.trim());
+                }
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  (e.target as HTMLInputElement).blur();
+                }
+                if (e.key === 'Escape') {
+                  setLaneName(lane.name || lane.label || '');
+                }
+              }}
+              className="w-full bg-slate-900/60 text-violet-200 text-sm font-medium px-2 py-1 rounded border border-violet-500/40 outline-none focus:border-violet-400"
+              title="Редактировать роль"
+            />
             <p className="text-violet-400 text-xs">#{lane.id}</p>
           </div>
         </div>
@@ -107,8 +142,22 @@ function EmptyState() {
 export default function NodeDetailsPanel() {
   const currentDocument = useAppStore((s) => s.currentDocument);
   const selectedNodeId = useAppStore((s) => s.selectedNodeId);
+  const updateGraph = useAppStore((s) => s.updateGraph);
 
   const selectedNode = selectedNodeId ? currentDocument?.graph.nodes.find((n) => n.id === selectedNodeId) : null;
+  const handleLaneNameChange = useCallback(
+    (laneId: string, newName: string) => {
+      if (!currentDocument) return;
+      const newGraph = {
+        ...currentDocument.graph,
+        lanes: currentDocument.graph.lanes.map((lane) => (
+          lane.id === laneId ? { ...lane, name: newName } : lane
+        )),
+      };
+      updateGraph(newGraph);
+    },
+    [currentDocument, updateGraph]
+  );
 
   return (
     <FloatingPanel
@@ -121,7 +170,12 @@ export default function NodeDetailsPanel() {
       className="w-80 max-h-[calc(100vh-180px)]"
     >
       {selectedNode && currentDocument ? (
-        <NodeDetails node={selectedNode} lanes={currentDocument.graph.lanes} imageDataUrl={currentDocument.imageDataUrl} />
+        <NodeDetails
+          node={selectedNode}
+          lanes={currentDocument.graph.lanes}
+          imageDataUrl={currentDocument.imageDataUrl}
+          onLaneNameChange={handleLaneNameChange}
+        />
       ) : (
         <EmptyState />
       )}

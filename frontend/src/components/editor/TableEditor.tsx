@@ -28,6 +28,190 @@ function graphToCsv(graph: BPMNGraph): string {
   return [header, ...rows].join('\n');
 }
 
+type ParsedStep = {
+  name: string;
+  roles: string[];
+};
+
+function buildParsedSteps(graph: BPMNGraph, includeRoles: boolean): ParsedStep[] {
+  const nodeMap = new Map(graph.nodes.map((n) => [n.id, n]));
+  const laneMap = new Map(graph.lanes.map((l) => [l.id, l]));
+  const sequenceEdges = graph.edges.filter((e) => e.source && e.target && e.label === 'sequenceFlow');
+  const edges = sequenceEdges.length > 0 ? sequenceEdges : graph.edges.filter((e) => e.source && e.target);
+
+  const adjacency = new Map<string, string[]>();
+  const indegree = new Map<string, number>();
+  for (const node of graph.nodes) {
+    adjacency.set(node.id, []);
+    indegree.set(node.id, 0);
+  }
+  for (const edge of edges) {
+    const source = edge.source!;
+    const target = edge.target!;
+    adjacency.get(source)?.push(target);
+    indegree.set(target, (indegree.get(target) || 0) + 1);
+  }
+
+  const hasTaskNodes = graph.nodes.some((n) => n.label === 'task' || n.label === 'subProcess');
+  const isGateway = (label: string) => label.toLowerCase().includes('gateway');
+  const isData = (label: string) => label === 'dataObject' || label === 'dataStore';
+
+  const includeNode = (node: (typeof graph.nodes)[number]) => {
+    if (isGateway(node.label) || isData(node.label)) return false;
+    if (hasTaskNodes) return node.label === 'task' || node.label === 'subProcess';
+    return Boolean(node.name?.trim());
+  };
+
+  const queue = graph.nodes
+    .filter((n) => (indegree.get(n.id) || 0) === 0)
+    .sort((a, b) => (a.center?.[1] || 0) - (b.center?.[1] || 0) || (a.center?.[0] || 0) - (b.center?.[0] || 0))
+    .map((n) => n.id);
+
+  const orderedIds: string[] = [];
+  const seen = new Set<string>();
+  while (queue.length > 0) {
+    const id = queue.shift()!;
+    if (seen.has(id)) continue;
+    seen.add(id);
+    orderedIds.push(id);
+    const neighbors = adjacency.get(id) || [];
+    for (const next of neighbors) {
+      indegree.set(next, (indegree.get(next) || 0) - 1);
+      if ((indegree.get(next) || 0) === 0) {
+        queue.push(next);
+      }
+    }
+  }
+
+  const steps = orderedIds
+    .map((id) => nodeMap.get(id))
+    .filter((n): n is NonNullable<typeof n> => Boolean(n))
+    .filter(includeNode)
+    .map((node) => {
+      let roles: string[] = [];
+      if (includeRoles) {
+        const lane = node.lane_id ? laneMap.get(node.lane_id) : null;
+        const roleRaw = (lane?.name || lane?.label || '').trim();
+        roles = roleRaw
+          ? roleRaw
+              .split(/[;,/|]/g)
+              .map((r) => r.trim())
+              .filter(Boolean)
+          : ['—'];
+      }
+      return {
+        name: (node.name || node.label || '').trim() || '—',
+        roles,
+      };
+    });
+
+  return steps.length > 0 ? steps : [{ name: '—', roles: includeRoles ? ['—'] : [] }];
+}
+
+function createParsedDiagramHtml(steps: ParsedStep[], title: string, includeRoles: boolean): string {
+  const escapeHtml = (value: string) =>
+    value
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+
+  const rows = steps
+    .map((step, index) => {
+      const safeName = escapeHtml(step.name);
+      const safeRoles = step.roles.map((role) => escapeHtml(role));
+      const rolesHtml = step.roles.length > 1
+        ? `<ul class="roles">${safeRoles.map((role) => `<li>${role}</li>`).join('')}</ul>`
+        : safeRoles[0];
+      const roleCell = includeRoles ? `<td class="col-role">${rolesHtml || '—'}</td>` : '';
+      return `
+        <tr>
+          <td class="col-num">${index + 1}</td>
+          <td class="col-action">${safeName}</td>
+          ${roleCell}
+        </tr>
+      `;
+    })
+    .join('');
+
+  const roleHeader = includeRoles ? '<th>Роль</th>' : '';
+
+  return `<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>${title} — Разобранная диаграмма</title>
+    <style>
+      :root { color-scheme: dark; }
+      body {
+        margin: 0;
+        padding: 24px;
+        background: #000;
+        color: #fff;
+        font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      }
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      h1 {
+        margin: 0 0 16px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #e2e8f0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #000;
+        border: 2px solid #fff;
+      }
+      th, td {
+        border: 2px solid #fff;
+        padding: 12px 16px;
+        vertical-align: top;
+        font-size: 16px;
+      }
+      th {
+        text-align: left;
+        font-weight: 700;
+      }
+      .col-num {
+        width: 64px;
+        text-align: center;
+        font-weight: 700;
+      }
+      .roles {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .roles li {
+        margin: 0 0 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Разобранная диаграмма</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Наименование действия</th>
+            ${roleHeader}
+          </tr>
+        </thead>
+        <tbody>
+          ${rows}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>`;
+}
+
 function parseCsv(csv: string): string[][] {
   const lines = csv.trim().split('\n');
   return lines.map((line) => {
@@ -210,6 +394,20 @@ export default function TableEditor() {
     URL.revokeObjectURL(url);
   }, [csv, currentDocument]);
 
+  const downloadParsedDiagram = useCallback(() => {
+    if (!currentDocument) return;
+    const includeRoles = (currentDocument.graph.lanes || []).length > 0;
+    const steps = buildParsedSteps(currentDocument.graph, includeRoles);
+    const html = createParsedDiagramHtml(steps, currentDocument.filename.replace(/\.\w+$/, ''), includeRoles);
+    const blob = new Blob([html], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = currentDocument.filename.replace(/\.\w+$/, '') + '-parsed.html';
+    a.click();
+    URL.revokeObjectURL(url);
+  }, [currentDocument]);
+
   if (!currentDocument) {
     return (
       <div className="w-full h-full flex items-center justify-center text-slate-500">
@@ -231,15 +429,26 @@ export default function TableEditor() {
           <span className="text-white font-semibold">Table Editor</span>
           <span className="text-sm text-slate-500">({body.length} rows)</span>
         </div>
-        <button
-          onClick={downloadCsv}
-          className="px-3 py-1.5 text-sm bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg hover:from-emerald-400 hover:to-teal-400 transition-all flex items-center gap-1.5"
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-          </svg>
-          Скачать CSV
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={downloadParsedDiagram}
+            className="px-3 py-1.5 text-sm bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg hover:from-indigo-400 hover:to-purple-400 transition-all flex items-center gap-1.5"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Скачать разбор (HTML)
+          </button>
+          <button
+            onClick={downloadCsv}
+            className="px-3 py-1.5 text-sm bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg hover:from-emerald-400 hover:to-teal-400 transition-all flex items-center gap-1.5"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Скачать CSV
+          </button>
+        </div>
       </div>
 
       {/* Table */}
